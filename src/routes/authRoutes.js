@@ -1,23 +1,3 @@
-// const express = require('express');
-// const router = express.Router();
-// const {
-//   register,
-//   verifyCode,
-//   login,
-//   forgotPassword,
-//   resetPassword
-// } = require('../controllers/authController');
-
-// router.post('/register', register);
-// router.post('/verify', verifyCode);
-// router.post('/login', login);
-// router.post('/forgot-password', forgotPassword);
-// router.post('/reset-password', resetPassword);
-
-// module.exports = router;
-
-
-
 const express = require('express');
 const router = express.Router();
 const { validationResult } = require('express-validator');
@@ -27,10 +7,8 @@ const {
 } = require('../controllers/authController');
 const {
   validateEmail,
-  validatePassword,
-  validateFullName
+  validatePassword
 } = require('../middleware/validator');
-
 
 const validate = (req, res, next) => {
   const errors = validationResult(req);
@@ -40,9 +18,8 @@ const validate = (req, res, next) => {
   next();
 };
 
-
 router.post('/register',
-  [...validateFullName, ...validateEmail, ...validatePassword],
+  [...validateEmail, ...validatePassword],
   validate,
   register
 );
@@ -57,6 +34,6 @@ router.post('/login',
 
 router.post('/forgot-password', validateEmail, validate, forgotPassword);
 
-router.post('/reset-password', validatePassword, validate, resetPassword);
+router.post('/reset-password', resetPassword);
 
 module.exports = router;
