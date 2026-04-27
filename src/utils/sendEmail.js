@@ -1,18 +1,15 @@
-const nodemailer = require("nodemailer");
+const nodemailer = require('nodemailer');
 
 const sendEmail = async (to, subject, htmlContent) => {
   try {
     const transporter = nodemailer.createTransport({
       host: "smtp.gmail.com",
       port: 465,
-      secure: true, // Port 465 uses secure: true
+      secure: true, 
       auth: {
         user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_PASS,
+        pass: process.env.EMAIL_PASS, 
       },
-      // إضافة المهلة عشان Vercel يستنى شوية
-      connectionTimeout: 10000,
-      greetingTimeout: 10000,
     });
 
     const info = await transporter.sendMail({
@@ -22,10 +19,11 @@ const sendEmail = async (to, subject, htmlContent) => {
       html: htmlContent,
     });
 
-    console.log(`✅ Success! Email ID: ${info.messageId}`);
+    console.log(" Actual Email Sent! ID:", info.messageId);
     return true;
   } catch (error) {
-    console.error(`❌ Email Error: ${error.message}`);
+    // السطر ده هو اللي هيعرفنا جوجل زعلانة ليه
+    console.error(" REAL MAIL ERROR:", error.message);
     return false;
   }
 };
