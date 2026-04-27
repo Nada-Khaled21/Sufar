@@ -29,16 +29,15 @@ exports.register = async (req, res) => {
       verifyCodeExpire: Date.now() + 10 * 60 * 1000
     });
 
-    // ✅ مؤقت - لما تجهز الإيميل ارجع للسطرين دول
-    // await sendEmail(
-    //   email,
-    //   'Verify your Sufar account',
-    //   `<h2>Your verification code is: <strong>${code}</strong></h2>
-    //    <p>This code will expire in 10 minutes.</p>`
-    // );
+    await sendEmail(
+      email,
+      'Verify your Sufar account',
+      `<h2>Your verification code is: <strong>${code}</strong></h2>
+       <p>This code will expire in 10 minutes.</p>`
+    );
 
-    // ✅ مؤقت - بيظهر الكود في الـ terminal بدل الإيميل
-    console.log('Verify Code:', code);
+    // Keep console log for debugging purposes, but now it sends the email too.
+    console.log('Verify Code (Debug):', code);
 
     res.status(201).json({ message: 'Account created! Please verify your email.' });
 
@@ -137,16 +136,15 @@ exports.forgotPassword = async (req, res) => {
     user.resetPasswordExpire = Date.now() + 10 * 60 * 1000;
     await user.save();
 
-    // ✅ مؤقت - لما تجهز الإيميل ارجع للسطرين دول
-    // await sendEmail(
-    //   email,
-    //   'Reset your Sufar password',
-    //   `<h2>Your reset code is: <strong>${code}</strong></h2>
-    //    <p>This code will expire in 10 minutes.</p>`
-    // );
+    await sendEmail(
+      email,
+      'Reset your Sufar password',
+      `<h2>Your reset code is: <strong>${code}</strong></h2>
+       <p>This code will expire in 10 minutes.</p>`
+    );
 
-    // ✅ مؤقت - بيظهر الكود في الـ terminal بدل الإيميل
-    console.log('Reset Code:', code);
+    // Keep console log for debugging purposes, but now it sends the email too.
+    console.log('Reset Code (Debug):', code);
 
     res.json({ message: 'Reset code sent to your email!' });
 
