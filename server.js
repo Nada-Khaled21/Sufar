@@ -59,7 +59,7 @@ app.use('/api/gallery', require('./src/routes/galleryRoutes'));
 // Test Route
 // =====================
 app.get('/', (req, res) => {
-  res.json({ message: 'Sufar API is running 🚀' });
+  res.json({ message: 'Sufar API is running ...' });
 });
 
 // =====================

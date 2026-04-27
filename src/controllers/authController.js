@@ -1,10 +1,10 @@
-const User = require('../models/User');
-const bcrypt = require('bcryptjs');
-const jwt = require('jsonwebtoken');
-const sendEmail = require('../utils/sendEmail');
+const User = require("../models/User");
+const bcrypt = require("bcryptjs");
+const jwt = require("jsonwebtoken");
+const sendEmail = require("../utils/sendEmail");
 
-// توليد كود عشوائي
-const generateCode = () => Math.floor(100000 + Math.random() * 900000).toString();
+const generateCode = () =>
+  Math.floor(100000 + Math.random() * 900000).toString();
 
 // =====================
 // Register
@@ -15,7 +15,7 @@ exports.register = async (req, res) => {
 
     const existingUser = await User.findOne({ email });
     if (existingUser) {
-      return res.status(400).json({ message: 'Email already exists' });
+      return res.status(400).json({ message: "Email already exists" });
     }
 
     const hashedPassword = await bcrypt.hash(password, 10);
@@ -26,21 +26,22 @@ exports.register = async (req, res) => {
       email,
       password: hashedPassword,
       verifyCode: code,
-      verifyCodeExpire: Date.now() + 10 * 60 * 1000
+      verifyCodeExpire: Date.now() + 10 * 60 * 1000,
     });
 
     await sendEmail(
       email,
-      'Verify your Sufar account',
+      "Verify your Sufar account",
       `<h2>Your verification code is: <strong>${code}</strong></h2>
-       <p>This code will expire in 10 minutes.</p>`
+       <p>This code will expire in 10 minutes.</p>`,
     );
 
     // Keep console log for debugging purposes, but now it sends the email too.
-    console.log('Verify Code (Debug):', code);
+    console.log("Verify Code (Debug):", code);
 
-    res.status(201).json({ message: 'Account created! Please verify your email.' });
-
+    res
+      .status(201)
+      .json({ message: "Account created! Please verify your email." });
   } catch (error) {
     res.status(500).json({ message: error.message });
   }
@@ -55,15 +56,15 @@ exports.verifyCode = async (req, res) => {
 
     const user = await User.findOne({ email });
     if (!user) {
-      return res.status(404).json({ message: 'User not found' });
+      return res.status(404).json({ message: "User not found" });
     }
 
     if (user.verifyCode !== code) {
-      return res.status(400).json({ message: 'Invalid code' });
+      return res.status(400).json({ message: "Invalid code" });
     }
 
     if (user.verifyCodeExpire < Date.now()) {
-      return res.status(400).json({ message: 'Code expired' });
+      return res.status(400).json({ message: "Code expired" });
     }
 
     user.isVerified = true;
@@ -71,8 +72,7 @@ exports.verifyCode = async (req, res) => {
     user.verifyCodeExpire = undefined;
     await user.save();
 
-    res.json({ message: 'Email verified successfully!' });
-
+    res.json({ message: "Email verified successfully!" });
   } catch (error) {
     res.status(500).json({ message: error.message });
   }
@@ -87,33 +87,32 @@ exports.login = async (req, res) => {
 
     const user = await User.findOne({ email });
     if (!user) {
-      return res.status(400).json({ message: 'Invalid email or password' });
+      return res.status(400).json({ message: "Invalid email or password" });
     }
 
     if (!user.isVerified) {
-      return res.status(400).json({ message: 'Please verify your email first' });
+      return res
+        .status(400)
+        .json({ message: "Please verify your email first" });
     }
 
     const isMatch = await bcrypt.compare(password, user.password);
     if (!isMatch) {
-      return res.status(400).json({ message: 'Invalid email or password' });
+      return res.status(400).json({ message: "Invalid email or password" });
     }
 
-    const token = jwt.sign(
-      { id: user._id },
-      process.env.JWT_SECRET,
-      { expiresIn: process.env.JWT_EXPIRE }
-    );
+    const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET, {
+      expiresIn: process.env.JWT_EXPIRE,
+    });
 
     res.json({
       token,
       user: {
         id: user._id,
         fullName: user.fullName,
-        email: user.email
-      }
+        email: user.email,
+      },
     });
-
   } catch (error) {
     res.status(500).json({ message: error.message });
   }
@@ -128,7 +127,7 @@ exports.forgotPassword = async (req, res) => {
 
     const user = await User.findOne({ email });
     if (!user) {
-      return res.status(404).json({ message: 'Email not found' });
+      return res.status(404).json({ message: "Email not found" });
     }
 
     const code = generateCode();
@@ -138,16 +137,15 @@ exports.forgotPassword = async (req, res) => {
 
     await sendEmail(
       email,
-      'Reset your Sufar password',
+      "Reset your Sufar password",
       `<h2>Your reset code is: <strong>${code}</strong></h2>
-       <p>This code will expire in 10 minutes.</p>`
+       <p>This code will expire in 10 minutes.</p>`,
     );
 
     // Keep console log for debugging purposes, but now it sends the email too.
-    console.log('Reset Code (Debug):', code);
+    console.log("Reset Code (Debug):", code);
 
-    res.json({ message: 'Reset code sent to your email!' });
-
+    res.json({ message: "Reset code sent to your email!" });
   } catch (error) {
     res.status(500).json({ message: error.message });
   }
@@ -162,15 +160,15 @@ exports.resetPassword = async (req, res) => {
 
     const user = await User.findOne({ email });
     if (!user) {
-      return res.status(404).json({ message: 'User not found' });
+      return res.status(404).json({ message: "User not found" });
     }
 
     if (user.resetPasswordCode !== code) {
-      return res.status(400).json({ message: 'Invalid code' });
+      return res.status(400).json({ message: "Invalid code" });
     }
 
     if (user.resetPasswordExpire < Date.now()) {
-      return res.status(400).json({ message: 'Code expired' });
+      return res.status(400).json({ message: "Code expired" });
     }
 
     user.password = await bcrypt.hash(newPassword, 10);
@@ -178,14 +176,11 @@ exports.resetPassword = async (req, res) => {
     user.resetPasswordExpire = undefined;
     await user.save();
 
-    res.json({ message: 'Password reset successfully!' });
-
+    res.json({ message: "Password reset successfully!" });
   } catch (error) {
     res.status(500).json({ message: error.message });
   }
 };
-
-
 
 // =====================
 // Log Out
@@ -195,7 +190,7 @@ const Logout = async (req, res) => {
     res.clearCookie("refreshToken", {
       httpOnly: true,
       secure: true,
-      sameSite: "Strict"
+      sameSite: "Strict",
     });
 
     res.json({ message: "Logout successful" });

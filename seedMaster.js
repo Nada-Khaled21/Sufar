@@ -150,7 +150,7 @@ const seedDestinationsAndActivities = async () => {
 const seedHotelsAndRooms = async () => {
   const filePath = path.join(__dirname, "citiesDataset.json");
   if (!fs.existsSync(filePath)) {
-    console.log("\n⚠️  ملف citiesDataset.json غير موجود — تخطي Phase 2");
+    console.log("\n  ملف citiesDataset.json غير موجود — تخطي Phase 2");
     return;
   }
 
@@ -190,7 +190,7 @@ const seedHotelsAndRooms = async () => {
         isFeatured: cityData.isFeatured || false,
       });
 
-      console.log(`  ✅ Destination added: ${cityData.city}`);
+      console.log(`   Destination added: ${cityData.city}`);
       stats.destinations.added++;
     } else {
       console.log(`    Destination exists: ${cityData.city}`);
