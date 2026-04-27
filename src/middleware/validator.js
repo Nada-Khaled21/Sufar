@@ -19,13 +19,6 @@ const validatePassword = [
   check('password')
     .notEmpty().withMessage('Password is required')
     .isLength({ min: 8 }).withMessage('Password must be more than 8 characters')
-    .custom(value => {
-      const symbol = /[!@#$%^&*]/;
-      if (!symbol.test(value)) {
-        throw new Error('Password must include at least one symbol (!@#$%^&*)');
-      }
-      return true;
-    }),
 ];
 
 
