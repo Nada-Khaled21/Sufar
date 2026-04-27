@@ -35,7 +35,7 @@ cloudinary.uploader.upload("./Images/cairo/hilton-grand-nile/general/27.jpg")
   //  npm run seed
   //  git add .
   // git commit -m "update"
-
+//  git add . && git commit -m "fix: vercel serverless support" && git push
 
   // https://sufar-rho.vercel.app/
 
