@@ -13,6 +13,8 @@ connectDB().then(() => { dbConnected = true; }).catch(err => console.error('DB c
 
 const app = express();
 
+app.set('trust proxy', 1);
+
 // =====================
 // Security Middleware
 // =====================
@@ -55,16 +57,14 @@ app.use('/api/bookings', require('./src/routes/bookingRoutes'));
 app.use('/api/reviews', require('./src/routes/reviewRoutes'));
 app.use('/api/gallery', require('./src/routes/galleryRoutes'));
 
-// =====================
+
 // Test Route
-// =====================
 app.get('/', (req, res) => {
   res.json({ message: 'Sufar API is running ...' });
 });
 
-// =====================
+
 // 404 Handler
-// =====================
 app.use((req, res) => {
   res.status(404).json({ message: 'Route not found' });
 });
