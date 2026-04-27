@@ -8,13 +8,11 @@ const sendEmail = async (to, subject, htmlContent) => {
 
   try {
     const transporter = nodemailer.createTransport({
-      host: "smtp.gmail.com",
-      port: 465,
-      secure: true,
+      service: "gmail",
       auth: {
-        user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_PASS,
-      },
+              user: process.env.EMAIL_USER,
+              pass: process.env.EMAIL_PASS,
+            }
     });
 
     const info = await transporter.sendMail({
@@ -24,10 +22,10 @@ const sendEmail = async (to, subject, htmlContent) => {
       html: htmlContent,
     });
 
-    console.log("✅ Actual Email Sent! ID:", info.messageId);
+    console.log("Actual Email Sent! ID:", info.messageId);
     return true;
   } catch (error) {
-    console.error("❌ REAL MAIL ERROR:", error.message);
+    console.error("REAL MAIL ERROR:", error.message);
     return false;
   }
 };
