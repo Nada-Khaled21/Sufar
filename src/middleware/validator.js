@@ -3,13 +3,9 @@ const { check } = require('express-validator');
 const validateFullName = [
   check('fullName')
     .notEmpty().withMessage('FullName is required')
-    .matches(/^[a-zA-Z\s]+$/).withMessage('FullName must contain only letters and spaces')
-    .isLength({ min: 3, max: 30 }).withMessage('FullName must be between 3 and 30 characters')
+    .matches(/^[a-zA-Z\u0600-\u06FF\s]+$/).withMessage('FullName must contain only letters and spaces (Arabic or English)')
+    .isLength({ min: 3, max: 50 }).withMessage('FullName must be between 3 and 50 characters')
     .trim()
-    .customSanitizer(value => {
-      if (typeof value !== 'string' || value.length === 0) return value;
-      return value.split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()).join(' ');
-    })
 ];
 
 const validateEmail = [
