@@ -23,8 +23,7 @@ cloudinary.uploader.upload("./Images/cairo/hilton-grand-nile/general/27.jpg")
 
 
 
-
-// https://sufar-7d5k88zza-nada-khaled21s-projects.vercel.app/api/....
+ // https://sufar-rho.vercel.app/api/auth/forgot-password
 
    //nodemon server.js 
   // npm run dev
