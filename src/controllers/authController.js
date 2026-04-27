@@ -119,34 +119,42 @@ exports.login = async (req, res) => {
 // =====================
 // Forgot Password
 // =====================
+
 exports.forgotPassword = async (req, res) => {
-  try {
-    const { email } = req.body;
+    try {
+        const { email } = req.body;
 
-    const user = await User.findOne({ email });
-    if (!user) {
-      return res.status(404).json({ message: 'Email not found' });
+        const user = await User.findOne({ email });
+        if (!user) {
+            return res.status(404).json({ message: 'Email not found' });
+        }
+
+        const resetCode = generateCode();
+        user.resetPasswordCode = resetCode;
+        user.resetPasswordExpire = Date.now() + 10 * 60 * 1000;
+        await user.save();
+
+        console.log("Attempting to send email to:", user.email);
+
+        const emailWasSent = await sendEmail(
+            user.email,
+            "Reset Code",
+            `Your code is ${resetCode}`
+        );
+
+        if (emailWasSent) {
+            console.log(" Controler: Email sent successfully");
+            return res.status(200).json({ message: "Email sent!" });
+        } else {
+            console.log(" Controler: Email failed to send");
+            return res.status(500).json({ message: "Email failed" });
+        }
+
+    } catch (error) {
+        console.error("Main Error:", error);
+        res.status(500).json({ message: "Server Error" });
     }
-
-    const code = generateCode();
-    user.resetPasswordCode = code;
-    user.resetPasswordExpire = Date.now() + 10 * 60 * 1000;
-    await user.save();
-
-    await sendEmail(
-      email,
-      'Reset your Sufar password',
-      `<h2>Your reset code is: <strong>${code}</strong></h2>
-       <p>This code will expire in 10 minutes.</p>`
-    );
-
-    res.json({ message: 'Reset code sent to your email!' });
-
-  } catch (error) {
-    res.status(500).json({ message: error.message });
-  }
 };
-
 // =====================
 // Reset Password
 // =====================
