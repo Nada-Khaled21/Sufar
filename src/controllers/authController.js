@@ -33,19 +33,54 @@ exports.register = async (req, res) => {
       email,
       "Verify your Sufar account",
       `<h2>Your verification code is: <strong>${code}</strong></h2>
-       <p>This code will expire in 10 minutes.</p>`,
+       <p>This code will expire in 10 minutes.</p>`
     );
 
-    // Keep console log for debugging purposes, but now it sends the email too.
-    console.log("Verify Code (Debug):", code);
+    console.log("✅ Register: Verify Code sent and logged:", code);
 
-    res
-      .status(201)
-      .json({ message: "Account created! Please verify your email." });
+    return res.status(201).json({ 
+      message: "Account created! Please verify your email." 
+    });
   } catch (error) {
-    res.status(500).json({ message: error.message });
+    console.error("❌ Register Error:", error.message);
+    return res.status(500).json({ message: error.message });
   }
 };
+
+// =====================
+// Forgot Password
+// =====================
+exports.forgotPassword = async (req, res) => {
+  try {
+    const { email } = req.body;
+
+    const user = await User.findOne({ email });
+    if (!user) {
+      return res.status(404).json({ message: "Email not found" });
+    }
+
+    const code = generateCode();
+    user.resetPasswordCode = code;
+    user.resetPasswordExpire = Date.now() + 10 * 60 * 1000;
+    await user.save();
+
+
+    await sendEmail(
+      email,
+      "Reset your Sufar password",
+      `<h2>Your reset code is: <strong>${code}</strong></h2>
+       <p>This code will expire in 10 minutes.</p>`
+    );
+
+    console.log("✅ Forgot Password: Reset Code sent and logged:", code);
+
+    return res.json({ message: "Reset code sent to your email!" });
+  } catch (error) {
+    console.error("❌ Forgot Password Error:", error.message);
+    return res.status(500).json({ message: error.message });
+  }
+};
+
 
 // =====================
 // Verify Code
@@ -113,39 +148,6 @@ exports.login = async (req, res) => {
         email: user.email,
       },
     });
-  } catch (error) {
-    res.status(500).json({ message: error.message });
-  }
-};
-
-// =====================
-// Forgot Password
-// =====================
-exports.forgotPassword = async (req, res) => {
-  try {
-    const { email } = req.body;
-
-    const user = await User.findOne({ email });
-    if (!user) {
-      return res.status(404).json({ message: "Email not found" });
-    }
-
-    const code = generateCode();
-    user.resetPasswordCode = code;
-    user.resetPasswordExpire = Date.now() + 10 * 60 * 1000;
-    await user.save();
-
-    await sendEmail(
-      email,
-      "Reset your Sufar password",
-      `<h2>Your reset code is: <strong>${code}</strong></h2>
-       <p>This code will expire in 10 minutes.</p>`,
-    );
-
-    // Keep console log for debugging purposes, but now it sends the email too.
-    console.log("Reset Code (Debug):", code);
-
-    res.json({ message: "Reset code sent to your email!" });
   } catch (error) {
     res.status(500).json({ message: error.message });
   }
