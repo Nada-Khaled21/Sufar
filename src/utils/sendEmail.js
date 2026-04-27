@@ -1,32 +1,33 @@
 const nodemailer = require('nodemailer');
 
-const transporter = nodemailer.createTransport({
-  service: 'gmail',
-  auth: {
-    user: process.env.EMAIL_USER,
-    pass: process.env.EMAIL_PASS
-  }
-});
-
 const sendEmail = async (to, subject, htmlContent) => {
   try {
-    await transporter.verify();
-    
+    const transporter = nodemailer.createTransport({
+      host: 'smtp.gmail.com',
+      port: 465,
+      secure: true, // Port 465 uses secure: true
+      auth: {
+        user: process.env.EMAIL_USER,
+        pass: process.env.EMAIL_PASS
+      },
+      // إضافة المهلة عشان Vercel يستنى شوية
+      connectionTimeout: 10000, 
+      greetingTimeout: 10000,
+    });
+
     const info = await transporter.sendMail({
       from: `"Sufar Travel" <${process.env.EMAIL_USER}>`,
       to: to,
       subject: subject,
       html: htmlContent
     });
-    
-    console.log(` Email sent successfully to ${to}`);
-    console.log(` Message ID: ${info.messageId}`);
-    
-    return { success: true, messageId: info.messageId };
-    
+
+    console.log(`✅ Success! Email ID: ${info.messageId}`);
+    return true;
+
   } catch (error) {
-    console.error(` Failed to send email to ${to}:`, error.message);
-    throw new Error(`Email sending failed: ${error.message}`);
+    console.error(`❌ Email Error: ${error.message}`);
+    return false; 
   }
 };
 
