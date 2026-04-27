@@ -17,7 +17,7 @@ const sendEmail = async (to, subject, htmlContent) => {
     
     // Send mail with defined transport object
     const info = await transporter.sendMail({
-      from: `"Sufar Travel" <${process.env.EMAIL_USER}>`,
+      from: `"Sufar Travel" <sufarbackend@gmail.com>`, 
       to: to,
       subject: subject,
       html: htmlContent
