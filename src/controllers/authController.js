@@ -138,8 +138,20 @@ exports.forgotPassword = async (req, res) => {
 
         const emailWasSent = await sendEmail(
             user.email,
-            "Reset Code",
-            `Your code is ${resetCode}`
+            "Sufar Travel - Password Reset Request",
+            `
+            <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; border: 1px solid #e0e0e0; border-radius: 10px;">
+                <h2 style="color: #2c3e50; text-align: center;">Password Reset</h2>
+                <p style="font-size: 16px; color: #333;">Hello ${user.fullName},</p>
+                <p style="font-size: 16px; color: #333;">We received a request to reset your password for your Sufar Travel account. Your reset code is:</p>
+                <div style="background-color: #f4f4f4; padding: 15px; text-align: center; font-size: 24px; font-weight: bold; letter-spacing: 5px; color: #e74c3c; border-radius: 5px; margin: 20px 0;">
+                    ${resetCode}
+                </div>
+                <p style="font-size: 14px; color: #7f8c8d;">If you did not request this, please ignore this email. The code will expire in 10 minutes.</p>
+                <hr style="border: none; border-top: 1px solid #e0e0e0; margin: 20px 0;" />
+                <p style="font-size: 12px; color: #95a5a6; text-align: center;">© 2026 Sufar Travel. All rights reserved.</p>
+            </div>
+            `
         );
 
         if (emailWasSent) {
