@@ -24,7 +24,7 @@ cloudinary.uploader.upload("./Images/cairo/hilton-grand-nile/general/27.jpg")
 
 
 
-
+// https://sufar-7d5k88zza-nada-khaled21s-projects.vercel.app/api/....
 
    //nodemon server.js 
   // npm run dev
@@ -35,6 +35,9 @@ cloudinary.uploader.upload("./Images/cairo/hilton-grand-nile/general/27.jpg")
   //  npm run seed
   //  git add .
   // git commit -m "update"
+
+
+  // https://sufar-rho.vercel.app/
 
   //GET /api/hotels?city=cairo
 //GET /api/hotels/:slug
