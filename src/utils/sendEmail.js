@@ -1,14 +1,19 @@
 const nodemailer = require('nodemailer');
 
 const sendEmail = async (to, subject, htmlContent) => {
+  // السطرين دول عشان نتأكد إن Vercel شايف المتغيرات فعلاً
+  console.log("Checking Config...");
+  console.log("Email User:", process.env.EMAIL_USER ? "✅ Found" : "❌ NOT FOUND");
+  console.log("Email Pass:", process.env.EMAIL_PASS ? "✅ Found" : "❌ NOT FOUND");
+
   try {
     const transporter = nodemailer.createTransport({
       host: "smtp.gmail.com",
       port: 465,
-      secure: true, 
+      secure: true,
       auth: {
         user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_PASS, 
+        pass: process.env.EMAIL_PASS,
       },
     });
 
@@ -19,11 +24,10 @@ const sendEmail = async (to, subject, htmlContent) => {
       html: htmlContent,
     });
 
-    console.log(" Actual Email Sent! ID:", info.messageId);
+    console.log("✅ Actual Email Sent! ID:", info.messageId);
     return true;
   } catch (error) {
-    // السطر ده هو اللي هيعرفنا جوجل زعلانة ليه
-    console.error(" REAL MAIL ERROR:", error.message);
+    console.error("❌ REAL MAIL ERROR:", error.message);
     return false;
   }
 };
