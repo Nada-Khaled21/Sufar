@@ -23,13 +23,13 @@ const sendEmail = async (to, subject, htmlContent) => {
       html: htmlContent
     });
     
-    console.log(`✅ Email sent successfully to ${to}`);
-    console.log(`📧 Message ID: ${info.messageId}`);
+    console.log(` Email sent successfully to ${to}`);
+    console.log(` Message ID: ${info.messageId}`);
     
     return { success: true, messageId: info.messageId };
     
   } catch (error) {
-    console.error(`❌ Failed to send email to ${to}:`, error.message);
+    console.error(` Failed to send email to ${to}:`, error.message);
     throw new Error(`Email sending failed: ${error.message}`);
   }
 };
