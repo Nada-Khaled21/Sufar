@@ -15,7 +15,6 @@ const roomSchema = new mongoose.Schema({
   // نوع الغرفة — متوافق مع الـ UI والفلتر
   type: {
     type: String,
-    enum: ['Single', 'Double', 'Triple', 'Family', 'Suite', 'Penthouse'],
     required: true
   },
 

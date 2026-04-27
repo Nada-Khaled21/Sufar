@@ -6,7 +6,10 @@ const rateLimit = require('express-rate-limit');
 const connectDB = require('./src/config/db');
 
 dotenv.config();
-connectDB();
+
+// Connect to DB (don't crash if it fails on serverless)
+let dbConnected = false;
+connectDB().then(() => { dbConnected = true; }).catch(err => console.error('DB connection error:', err.message));
 
 const app = express();
 
@@ -91,7 +94,13 @@ app.use((err, req, res, next) => {
   });
 });
 
-const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
-});
+// Only listen when running locally (not on Vercel)
+if (process.env.VERCEL !== '1') {
+  const PORT = process.env.PORT || 5000;
+  app.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`);
+  });
+}
+
+// Export for Vercel serverless
+module.exports = app;

@@ -35,4 +35,10 @@ const destinationSchema = new mongoose.Schema({
   }
 }, { timestamps: true });
 
+destinationSchema.pre('save', function() {
+  if (!this.slug && this.name) {
+    this.slug = this.name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)+/g, '');
+  }
+});
+
 module.exports = mongoose.model('Destination', destinationSchema);
