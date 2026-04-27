@@ -33,6 +33,8 @@ cloudinary.uploader.upload("./Images/cairo/hilton-grand-nile/general/27.jpg")
   //npm install cloudinary mongoose dotenv fs-extra path
   //npm install axios
   //  npm run seed
+  //  git add .
+  // git commit -m "update"
 
   //GET /api/hotels?city=cairo
 //GET /api/hotels/:slug
