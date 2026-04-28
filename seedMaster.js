@@ -105,7 +105,7 @@ const seedHotels = async () => {
   const data = JSON.parse(fs.readFileSync(file, "utf-8"));
 
   for (const city of data) {
-    const citySlug = city.slug || generateSlug(city.city);
+    const citySlug = (city.slug || generateSlug(city.city)).toLowerCase();
 
     const destination = await Destination.findOneAndUpdate(
       { slug: citySlug },

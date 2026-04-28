@@ -209,11 +209,11 @@
   },
 
   {
-    "name": "Mecca",
+    "name": "Makkah",
     "country": "Saudi Arabia",
     "region": "Middle East",
     "description": "The holiest city in Islam.",
-    "image": "mecca.jpg",
+    "image": "Makkah.jpg",
     "activities": [
       { "title": "Al-Masjid Al-Haram", "description": "The largest mosque in the world", "image": "haram.jpg" },
       { "title": "Kaaba", "description": "The most sacred site in Islam", "image": "kaaba.jpg" },
@@ -223,11 +223,11 @@
   },
 
   {
-    "name": "Medina",
+    "name": "Al Madinah",
     "country": "Saudi Arabia",
     "region": "Middle East",
     "description": "The city of the Prophet Muhammad ﷺ.",
-    "image": "medina.jpg",
+    "image": "Al Madinah.jpg",
     "activities": [
       { "title": "Al-Masjid An-Nabawi", "description": "Second holiest mosque in Islam", "image": "nabawi.jpg" },
       { "title": "Mount Uhud", "description": "Historic battlefield", "image": "uhud.jpg" },
@@ -363,7 +363,7 @@
   },
 
   {
-    "name": "New York City",
+    "name": "New York",
     "country": "USA",
     "region": "North America",
     "description": "The city that never sleeps.",

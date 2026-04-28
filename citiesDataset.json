@@ -4843,7 +4843,7 @@
     "country": "Saudi Arabia",
     "country_ar": "المملكة العربية السعودية",
     "region": "Middle East",
-    "coverImage": "makkah/cover.jpg",
+    "coverImage": "Makkah/cover.jpg",
     "description": "The holiest city in Islam and the birthplace of Prophet Muhammad. Makkah is the center of the Islamic world, attracting millions of pilgrims annually for Hajj and Umrah at the Masjid Al Haram.",
     "highlights": [
       "Masjid Al Haram",
@@ -4852,9 +4852,9 @@
       "Jabal al-Nour"
     ],
     "galleryImages": [
-      "makkah/gallery/1.jpg",
-      "makkah/gallery/2.jpg",
-      "makkah/gallery/3.jpg"
+      "Makkah/gallery/1.jpg",
+      "Makkah/gallery/2.jpg",
+      "Makkah/gallery/3.jpg"
     ],
     "hotels": [
       {
@@ -4878,8 +4878,8 @@
           "Coffee Shop"
         ],
         "images": [
-          "makkah/park-inn/1.jpg",
-          "makkah/park-inn/2.jpg"
+          "Makkah/park-inn/1.jpg",
+          "Makkah/park-inn/2.jpg"
         ],
         "roomTypes": [
           {
@@ -4930,8 +4930,8 @@
           "24-hour Front Desk"
         ],
         "images": [
-          "makkah/doubletree/1.jpg",
-          "makkah/doubletree/2.jpg"
+          "Makkah/doubletree/1.jpg",
+          "Makkah/doubletree/2.jpg"
         ],
         "roomTypes": [
           {
@@ -4976,8 +4976,8 @@
           "Gift Shop"
         ],
         "images": [
-          "makkah/meridien-towers/1.jpg",
-          "makkah/meridien-towers/2.jpg"
+          "Makkah/meridien-towers/1.jpg",
+          "Makkah/meridien-towers/2.jpg"
         ],
         "roomTypes": [
           {
@@ -5022,8 +5022,8 @@
           "Daily Housekeeping"
         ],
         "images": [
-          "makkah/al-kiram/1.jpg",
-          "makkah/al-kiram/2.jpg"
+          "Makkah/al-kiram/1.jpg",
+          "Makkah/al-kiram/2.jpg"
         ],
         "roomTypes": [
           {
@@ -5056,8 +5056,8 @@
           "Modern Elevators"
         ],
         "images": [
-          "makkah/al-kiswah/1.jpg",
-          "makkah/al-kiswah/2.jpg"
+          "Makkah/al-kiswah/1.jpg",
+          "Makkah/al-kiswah/2.jpg"
         ],
         "roomTypes": [
           {
