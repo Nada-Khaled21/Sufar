@@ -91,7 +91,6 @@ exports.getHotel = async (req, res) => {
     const { id } = req.params;
     let hotel;
 
-    // لو الـ id المبعوث عبارة عن ObjectId صحيح، ابحث بيه، لو لأ ابحث كأنه Slug
     if (mongoose.isValidObjectId(id)) {
       hotel = await Hotel.findById(id).populate('destination', 'name country');
     } else {
@@ -169,6 +168,44 @@ exports.createRoom = async (req, res) => {
 
     res.status(201).json(room);
 
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+};
+
+// =====================
+// Update Hotel — Admin Only
+// =====================
+exports.updateHotel = async (req, res) => {
+  try {
+    const hotel = await Hotel.findByIdAndUpdate(
+      req.params.id,
+      req.body,
+      { new: true, runValidators: true }
+    );
+
+    if (!hotel) {
+      return res.status(404).json({ message: 'Hotel not found' });
+    }
+
+    res.json(hotel);
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+};
+
+// =====================
+// Delete Hotel — Admin Only
+// =====================
+exports.deleteHotel = async (req, res) => {
+  try {
+    const hotel = await Hotel.findByIdAndDelete(req.params.id);
+
+    if (!hotel) {
+      return res.status(404).json({ message: 'Hotel not found' });
+    }
+
+    res.json({ message: 'Hotel deleted successfully' });
   } catch (error) {
     res.status(500).json({ message: error.message });
   }

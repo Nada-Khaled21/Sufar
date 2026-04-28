@@ -32,7 +32,7 @@ const limiter = rateLimit({
 });
 app.use('/api', limiter);
 
-// Rate Limit أشد على الـ Auth routes
+
 const authLimiter = rateLimit({
   windowMs: 15 * 60 * 1000,
   max: 100, 

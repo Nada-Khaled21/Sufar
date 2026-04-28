@@ -6,6 +6,12 @@ const userSchema = new mongoose.Schema({
     required: true,
     trim: true
   },
+  username: {
+    type: String,
+    unique: true,
+    sparse: true,   // sparse عشان الـ users العاديين ممكن ميكونش عندهم username
+    trim: true
+  },
   email: {
     type: String,
     required: true,
@@ -39,6 +45,11 @@ const userSchema = new mongoose.Schema({
   },
   resetPasswordExpire: {
     type: Date
+  },
+  role: {
+    type: String,
+    enum: ['user', 'admin'],
+    default: 'user'
   }
 }, { timestamps: true });
 

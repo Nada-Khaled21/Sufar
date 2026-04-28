@@ -3,7 +3,7 @@ const router = express.Router();
 const { validationResult } = require('express-validator');
 const {
   register, verifyCode, login,
-  forgotPassword, resetPassword
+  forgotPassword, resetPassword, adminLogin
 } = require('../controllers/authController');
 const {
   validateEmail,
@@ -35,5 +35,8 @@ router.post('/login',
 router.post('/forgot-password', validateEmail, validate, forgotPassword);
 
 router.post('/reset-password', resetPassword);
+
+// Admin Login — بـ username مش email
+router.post('/admin/login', adminLogin);
 
 module.exports = router;

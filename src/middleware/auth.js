@@ -41,3 +41,4 @@ const isAdmin = (req, res, next) => {
 
 module.exports = protect;
 module.exports.isAdmin = isAdmin;
+module.exports.protect = protect;
