@@ -10,6 +10,7 @@ const Destination = require("./src/models/Destination");
 const Activity = require("./src/models/activities");
 const Hotel = require("./src/models/Hotel");
 const Room = require("./src/models/Room");
+const TravelOffice = require("./src/models/travelOffice");
 
 // =====================
 // STATS
@@ -19,6 +20,7 @@ const stats = {
   activities: { added: 0 },
   hotels: { added: 0 },
   rooms: { added: 0 },
+  travelOffices: { added: 0 },
 };
 
 // =====================
@@ -183,6 +185,38 @@ const seedHotels = async () => {
 };
 
 // =====================
+// 3. TRAVEL OFFICES
+// =====================
+const seedTravelOffices = async () => {
+  const file = path.join(__dirname, "office.json");
+  if (!fs.existsSync(file)) return;
+
+  const data = JSON.parse(fs.readFileSync(file, "utf-8"));
+
+  for (const o of data) {
+    const cleanedReviews = (o.reviews || []).map((r) => ({
+      name: r.name,
+      comment: r.comment,
+      rating: r.rating,
+      date: r.date ? new Date(r.date) : new Date(),
+    }));
+
+    await TravelOffice.findOneAndUpdate(
+      { name: o.name, "location.city": o.location?.city },
+      {
+        $setOnInsert: {
+          ...o,
+          reviews: cleanedReviews,
+        },
+      },
+      { upsert: true }
+    );
+
+    stats.travelOffices.added++;
+  }
+};
+
+// =====================
 // MAIN
 // =====================
 const main = async () => {
@@ -190,8 +224,16 @@ const main = async () => {
     await mongoose.connect(process.env.MONGO_URI);
     console.log(" Connected to MongoDB");
 
+    console.log(" Cleaning old data...");
+    await Destination.deleteMany({});
+    await Activity.deleteMany({}); 
+    await Hotel.deleteMany({});
+    await Room.deleteMany({});
+    await TravelOffice.deleteMany({});
+
     await seedDestinations();
     await seedHotels();
+    await seedTravelOffices();
 
     console.log("\n DONE SEEDING");
     console.log(stats);

@@ -36,8 +36,6 @@ const hotelSchema = new mongoose.Schema(
       default: 0,
     },
 
-    // أقل سعر غرفة — بيتحسب تلقائي في الـ Seed من roomTypes
-    // بيُستخدم في الـ Card والفلتر فقط
     startingFrom: {
       type: Number,
       default: 0,

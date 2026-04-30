@@ -32,7 +32,7 @@ const limiter = rateLimit({
 });
 app.use('/api', limiter);
 
-
+// Rate Limit أشد على الـ Auth routes
 const authLimiter = rateLimit({
   windowMs: 15 * 60 * 1000,
   max: 100, 
@@ -58,6 +58,7 @@ app.use('/api/flights', require('./src/routes/flightRoutes'));
 app.use('/api/bookings', require('./src/routes/bookingRoutes'));
 app.use('/api/reviews', require('./src/routes/reviewRoutes'));
 app.use('/api/gallery', require('./src/routes/galleryRoutes'));
+app.use('/api/travel-offices', require('./src/routes/travelOfficeRoutes'));
 
 
 // Test Route

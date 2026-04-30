@@ -9,18 +9,19 @@ const {
   cancelBooking,
   checkAvailability
 } = require('../controllers/bookingController');
-const protect = require('../middleware/auth');
-const { isAdmin } = require('../middleware/auth');
+const { protect } = require('../middleware/auth');
 
 // Check availability — public
 router.get('/check-availability', checkAvailability);
 
 // User routes — لازم logged in
-router.post('/hotel', protect, createHotelBooking);
-router.post('/flight', protect, createFlightBooking);
-router.get('/my', protect, getMyBookings);
-router.get('/:id', protect, getBooking);
-router.put('/:id/pay', protect, payBooking);
-router.put('/:id/cancel', protect, cancelBooking);
+router.use(protect);
+
+router.post('/hotel', createHotelBooking);
+router.post('/flight', createFlightBooking);
+router.get('/my', getMyBookings);
+router.get('/:id', getBooking);
+router.put('/:id/pay', payBooking);
+router.put('/:id/cancel', cancelBooking);
 
 module.exports = router;

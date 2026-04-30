@@ -23,6 +23,8 @@ const bookingSchema = new mongoose.Schema({
   checkIn: Date,
   checkOut: Date,
   nights: Number,
+  pricePerNight: Number,   
+  totalGuests: { type: Number, default: 1 },
 
   // Flight Booking
   flight: {
@@ -45,12 +47,25 @@ const bookingSchema = new mongoose.Schema({
     type: Number,
     required: true
   },
-  initialPayment: Number,
+  initialPayment: Number,        
+  paymentOption: {
+    type: String,
+    enum: ['partial', 'full'],   
+  },
+  amountPaid: {
+    type: Number,
+    default: 0
+  },
+  remainingAmount: {
+    type: Number,
+    default: 0
+  },
   paymentStatus: {
     type: String,
-    enum: ['pending', 'paid', 'failed'],
+    enum: ['pending', 'partially_paid', 'paid', 'failed'],
     default: 'pending'
   },
+  paidAt: Date,
   bookingStatus: {
     type: String,
     enum: ['confirmed', 'cancelled', 'pending'],

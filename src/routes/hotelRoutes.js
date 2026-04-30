@@ -8,8 +8,7 @@ const {
   deleteHotel,
   createRoom
 } = require('../controllers/hotelController');
-const protect = require('../middleware/auth');
-const { isAdmin } = require('../middleware/auth');
+const { protect, isAdmin } = require('../middleware/auth');
 
 // Public routes
 router.get('/', getHotels);

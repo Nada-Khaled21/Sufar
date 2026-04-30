@@ -2,9 +2,7 @@ const Hotel = require('../models/Hotel');
 const Room = require('../models/Room');
 const mongoose = require('mongoose');
 
-// =====================
 // Get All Hotels — مع Search و Filter و Pagination
-// =====================
 exports.getHotels = async (req, res) => {
   try {
     const {

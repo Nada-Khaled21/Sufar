@@ -31,10 +31,14 @@ router.post('/login',
   validate,
   login
 );
-
 router.post('/forgot-password', validateEmail, validate, forgotPassword);
 
 router.post('/reset-password', resetPassword);
+
+
+router.get('/', (req, res) => {
+  res.json({ message: "auth route working ✅" });
+});
 
 // Admin Login — بـ username مش email
 router.post('/admin/login', adminLogin);

@@ -6,8 +6,7 @@ const {
   createDestination,
   deleteDestination
 } = require('../controllers/destinationController');
-const protect = require('../middleware/auth');
-const { isAdmin } = require('../middleware/auth');
+const { protect, isAdmin } = require('../middleware/auth');
 
 // Public routes
 router.get('/', getDestinations);

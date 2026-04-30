@@ -1,9 +1,7 @@
 const jwt = require('jsonwebtoken');
 const User = require('../models/User');
 
-// =====================
-// Protect — لازم تكوني logged in
-// =====================
+// Protect Middleware
 const protect = async (req, res, next) => {
   try {
     let token;
@@ -17,6 +15,7 @@ const protect = async (req, res, next) => {
     }
 
     const decoded = jwt.verify(token, process.env.JWT_SECRET);
+
     req.user = await User.findById(decoded.id).select('-password');
 
     if (!req.user) {
@@ -25,13 +24,11 @@ const protect = async (req, res, next) => {
 
     next();
   } catch (error) {
-    res.status(401).json({ message: 'Not authorized, invalid token' });
+    return res.status(401).json({ message: 'Not authorized, invalid token' });
   }
 };
 
-// =====================
-// isAdmin — لازم تكوني admin
-// =====================
+// Admin Middleware
 const isAdmin = (req, res, next) => {
   if (req.user?.role !== 'admin') {
     return res.status(403).json({ message: 'Not authorized, admin only' });
@@ -39,6 +36,7 @@ const isAdmin = (req, res, next) => {
   next();
 };
 
-module.exports = protect;
-module.exports.isAdmin = isAdmin;
-module.exports.protect = protect;
+module.exports = {
+  protect,
+  isAdmin
+};

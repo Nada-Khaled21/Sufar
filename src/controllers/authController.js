@@ -187,7 +187,7 @@ exports.forgotPassword = async (req, res) => {
                 <h2 style="color: #2c3e50; text-align: center;">Password Reset</h2>
                 <p style="font-size: 16px; color: #333;">Hello ${user.fullName},</p>
                 <p style="font-size: 16px; color: #333;">We received a request to reset your password for your Sufar Travel account. Your reset code is:</p>
-                <div style="background-color: #f4f4f4; padding: 15px; text-align: center; font-size: 24px; font-weight: bold; letter-spacing: 5px; color: #e74c3c; border-radius: 5px; margin: 20px 0;">
+                <div style="background-color: #f4f4f4; padding: 15px; text-align: center; font-size: 24px; font-weight: bold; letter-spacing: 5px; color: #3187c8ff; border-radius: 5px; margin: 20px 0;">
                     ${resetCode}
                 </div>
                 <p style="font-size: 14px; color: #7f8c8d;">If you did not request this, please ignore this email. The code will expire in 10 minutes.</p>

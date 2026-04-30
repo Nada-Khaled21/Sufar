@@ -135,39 +135,111 @@ exports.createFlightBooking = async (req, res) => {
 // =====================
 exports.payBooking = async (req, res) => {
   try {
+    const { cardNumber, expDate, cvv, paymentOption } = req.body;
+
+    // ─── Validate card details ─────────────────────────
+    if (!cardNumber || !expDate || !cvv) {
+      return res.status(400).json({ message: 'Card number, expiry date and CVV are required' });
+    }
+
+    if (!/^\d{16}$/.test(cardNumber.replace(/\s/g, ''))) {
+      return res.status(400).json({ message: 'Invalid card number' });
+    }
+
+    if (!/^(0[1-9]|1[0-2])\/\d{2}$/.test(expDate)) {
+      return res.status(400).json({ message: 'Invalid expiry date. Use MM/YY format' });
+    }
+
+    // التحقق إن الكارت مش expired
+    const [month, year] = expDate.split('/');
+    const expiry = new Date(2000 + parseInt(year), parseInt(month) - 1, 1);
+    if (expiry < new Date()) {
+      return res.status(400).json({ message: 'Card has expired' });
+    }
+
+    if (!/^\d{3,4}$/.test(cvv)) {
+      return res.status(400).json({ message: 'Invalid CVV' });
+    }
+
+    // ─── Validate paymentOption ────────────────────────
+    if (!['partial', 'full'].includes(paymentOption)) {
+      return res.status(400).json({ message: 'paymentOption must be "partial" or "full"' });
+    }
+
+    // ─── Get booking ───────────────────────────────────
     const booking = await Booking.findById(req.params.id);
     if (!booking) {
       return res.status(404).json({ message: 'Booking not found' });
     }
 
-    // التحقق إن الـ booking بتاع اليوزر ده
     if (booking.user.toString() !== req.user._id.toString()) {
       return res.status(403).json({ message: 'Not authorized' });
-    }
-
-    // التحقق إن الـ booking لسه pending
-    if (booking.paymentStatus === 'paid') {
-      return res.status(400).json({ message: 'Booking already paid' });
     }
 
     if (booking.bookingStatus === 'cancelled') {
       return res.status(400).json({ message: 'Cannot pay a cancelled booking' });
     }
 
-    // هنا في المستقبل تضيف Payment Gateway زي Stripe
-    // دلوقتي بنعمل simulate إن الدفع نجح
-    booking.paymentStatus = 'paid';
+    if (booking.paymentStatus === 'paid') {
+      return res.status(400).json({ message: 'Booking already fully paid' });
+    }
+
+    // ─── Calculate amount ──────────────────────────────
+    const amountPaid = paymentOption === 'full'
+      ? booking.totalPrice
+      : booking.initialPayment; // 50%
+
+    const remainingAmount = booking.totalPrice - amountPaid;
+
+    // ─── Simulate payment processing ──────────────────
+    // هنا في المستقبل هتستبدليه بـ Stripe أو Paymob
+    const paymentResult = simulatePayment(cardNumber);
+    if (!paymentResult.success) {
+      return res.status(402).json({ message: paymentResult.message });
+    }
+
+    // ─── Update booking ────────────────────────────────
+    booking.amountPaid = amountPaid;
+    booking.remainingAmount = remainingAmount;
+    booking.paymentOption = paymentOption;
+    booking.paymentStatus = paymentOption === 'full' ? 'paid' : 'partially_paid';
     booking.bookingStatus = 'confirmed';
+    booking.paidAt = new Date();
+
     await booking.save();
 
     res.json({
-      message: 'Payment completed successfully!',
-      booking
+      message: paymentOption === 'full'
+        ? 'Payment completed successfully!'
+        : 'Initial payment completed! Remaining amount due at check-in.',
+      booking: {
+        id: booking._id,
+        bookingStatus: booking.bookingStatus,
+        paymentStatus: booking.paymentStatus,
+        paymentOption,
+        totalPrice: booking.totalPrice,
+        amountPaid,
+        remainingAmount,
+        paidAt: booking.paidAt
+      }
     });
 
   } catch (error) {
     res.status(500).json({ message: error.message });
   }
+};
+
+// ─── Simulate Payment Helper ───────────────────────────
+// بتشيك آخر رقم في الكارت عشان تعمل test cases
+// 1 = success, أي رقم تاني = success, بس 0 = fail (للتيست)
+const simulatePayment = (cardNumber) => {
+  const lastDigit = cardNumber.replace(/\s/g, '').slice(-1);
+
+  if (lastDigit === '0') {
+    return { success: false, message: 'Payment declined. Please try another card.' };
+  }
+
+  return { success: true };
 };
 
 // =====================

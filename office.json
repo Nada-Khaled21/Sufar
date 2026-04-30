@@ -1,0 +1,2284 @@
+[
+  {
+    "name": "Blue Sky Travel",
+    "logo": "",
+    "website": "https://bluesky-travel.com",
+    "email": "",
+    "phone": "+20 2 3336 8261",
+    "location": {
+      "city": "Cairo",
+      "country": "Egypt"
+    },
+    "services": [
+      "Travel Booking Services",
+      "Flight Reservations",
+      "Hotel Arrangements",
+      "Customer Travel Support"
+    ],
+    "certifications": [],
+    "rating": 4.5,
+    "reviewsCount": 0,
+    "description": "Well-organized trips, strong reputation, good customer service.",
+    "stats": {
+      "totalBookings": 0,
+      "countriesCovered": 0,
+      "yearsInBusiness": 0,
+      "customerSatisfaction": 0
+    },
+    "reviews": [
+      {
+        "name": "User 1",
+        "comment": "Well-organized trips",
+        "rating": 5,
+        "date": "2024-12"
+      },
+      {
+        "name": "User 2",
+        "comment": "Strong reputation",
+        "rating": 4,
+        "date": "2024-11"
+      },
+      {
+        "name": "User 3",
+        "comment": "Good customer service",
+        "rating": 4,
+        "date": "2024-10"
+      }
+    ],
+    "isActive": true
+  },
+  {
+    "name": "Travco Travel",
+    "logo": "",
+    "website": "https://travcotravels.com",
+    "email": "",
+    "phone": "+20 2 2735 5555",
+    "location": {
+      "city": "Cairo",
+      "country": "Egypt"
+    },
+    "services": [
+      "Travel Booking Services",
+      "Flight Reservations",
+      "Hotel Arrangements",
+      "Customer Travel Support"
+    ],
+    "certifications": [],
+    "rating": 4.3,
+    "reviewsCount": 0,
+    "description": "High-quality services, complete packages, slightly expensive.",
+    "stats": {
+      "totalBookings": 0,
+      "countriesCovered": 0,
+      "yearsInBusiness": 0,
+      "customerSatisfaction": 0
+    },
+    "reviews": [
+      {
+        "name": "User 1",
+        "comment": "High-quality services",
+        "rating": 4,
+        "date": "2024-12"
+      },
+      {
+        "name": "User 2",
+        "comment": "Complete packages",
+        "rating": 4,
+        "date": "2024-11"
+      },
+      {
+        "name": "User 3",
+        "comment": "Slightly expensive",
+        "rating": 3,
+        "date": "2024-10"
+      }
+    ],
+    "isActive": true
+  },
+  {
+    "name": "Excel Travel Egypt",
+    "logo": "",
+    "website": "https://exceltravel-egypt.com",
+    "email": "",
+    "phone": "+20 2 2268 9999",
+    "location": {
+      "city": "Cairo",
+      "country": "Egypt"
+    },
+    "services": [
+      "Travel Booking Services",
+      "Flight Reservations",
+      "Hotel Arrangements",
+      "Customer Travel Support"
+    ],
+    "certifications": [],
+    "rating": 4.4,
+    "reviewsCount": 0,
+    "description": "Fast service, good for local trips, positive reviews.",
+    "stats": {
+      "totalBookings": 0,
+      "countriesCovered": 0,
+      "yearsInBusiness": 0,
+      "customerSatisfaction": 0
+    },
+    "reviews": [
+      {
+        "name": "User 1",
+        "comment": "Fast service",
+        "rating": 5,
+        "date": "2024-12"
+      },
+      {
+        "name": "User 2",
+        "comment": "Good for local trips",
+        "rating": 4,
+        "date": "2024-11"
+      },
+      {
+        "name": "User 3",
+        "comment": "Positive reviews",
+        "rating": 4,
+        "date": "2024-10"
+      }
+    ],
+    "isActive": true
+  },
+  {
+    "name": "Deluxe Travel Egypt",
+    "logo": "",
+    "website": "",
+    "email": "",
+    "phone": "+20 3 487 8897",
+    "location": {
+      "city": "Alexandria",
+      "country": "Egypt"
+    },
+    "services": [
+      "Travel Booking Services",
+      "Flight Reservations",
+      "Hotel Arrangements",
+      "Customer Travel Support"
+    ],
+    "certifications": [],
+    "rating": 4.2,
+    "reviewsCount": 0,
+    "description": "Good for sea trips, trusted locally, busy seasons.",
+    "stats": {
+      "totalBookings": 0,
+      "countriesCovered": 0,
+      "yearsInBusiness": 0,
+      "customerSatisfaction": 0
+    },
+    "reviews": [
+      {
+        "name": "User 1",
+        "comment": "Good for sea trips",
+        "rating": 4,
+        "date": "2024-12"
+      },
+      {
+        "name": "User 2",
+        "comment": "Trusted locally",
+        "rating": 4,
+        "date": "2024-11"
+      },
+      {
+        "name": "User 3",
+        "comment": "Busy seasons",
+        "rating": 3,
+        "date": "2024-10"
+      }
+    ],
+    "isActive": true
+  },
+  {
+    "name": "Memphis Tours",
+    "logo": "",
+    "website": "https://memphistours.com",
+    "email": "",
+    "phone": "+20 100 999 9067",
+    "location": {
+      "city": "Alexandria",
+      "country": "Egypt"
+    },
+    "services": [
+      "Travel Booking Services",
+      "Flight Reservations",
+      "Hotel Arrangements",
+      "Customer Travel Support"
+    ],
+    "certifications": [],
+    "rating": 4.6,
+    "reviewsCount": 0,
+    "description": "Highly rated, professional, luxury tours.",
+    "stats": {
+      "totalBookings": 0,
+      "countriesCovered": 0,
+      "yearsInBusiness": 0,
+      "customerSatisfaction": 0
+    },
+    "reviews": [
+      {
+        "name": "User 1",
+        "comment": "Highly rated",
+        "rating": 5,
+        "date": "2024-12"
+      },
+      {
+        "name": "User 2",
+        "comment": "Professional",
+        "rating": 5,
+        "date": "2024-11"
+      },
+      {
+        "name": "User 3",
+        "comment": "Luxury tours",
+        "rating": 5,
+        "date": "2024-10"
+      }
+    ],
+    "isActive": true
+  },
+  {
+    "name": "Alexandria Travel Agency",
+    "logo": "",
+    "website": "",
+    "email": "",
+    "phone": "+20 3 480 1234",
+    "location": {
+      "city": "Alexandria",
+      "country": "Egypt"
+    },
+    "services": [
+      "Travel Booking Services",
+      "Flight Reservations",
+      "Hotel Arrangements",
+      "Customer Travel Support"
+    ],
+    "certifications": [],
+    "rating": 4,
+    "reviewsCount": 0,
+    "description": "Budget-friendly, simple trips, less professional.",
+    "stats": {
+      "totalBookings": 0,
+      "countriesCovered": 0,
+      "yearsInBusiness": 0,
+      "customerSatisfaction": 0
+    },
+    "reviews": [
+      {
+        "name": "User 1",
+        "comment": "Budget-friendly",
+        "rating": 4,
+        "date": "2024-12"
+      },
+      {
+        "name": "User 2",
+        "comment": "Simple trips",
+        "rating": 4,
+        "date": "2024-11"
+      },
+      {
+        "name": "User 3",
+        "comment": "Less professional",
+        "rating": 3,
+        "date": "2024-10"
+      }
+    ],
+    "isActive": true
+  },
+  {
+    "name": "Sharm Club Travel",
+    "logo": "",
+    "website": "https://sharm-club.com",
+    "email": "",
+    "phone": "",
+    "location": {
+      "city": "Sharm El Sheikh",
+      "country": "Egypt"
+    },
+    "services": [
+      "Travel Booking Services",
+      "Flight Reservations",
+      "Hotel Arrangements",
+      "Customer Travel Support"
+    ],
+    "certifications": [],
+    "rating": 4.8,
+    "reviewsCount": 0,
+    "description": "Excellent, variety of trips, highly rated.",
+    "stats": {
+      "totalBookings": 0,
+      "countriesCovered": 0,
+      "yearsInBusiness": 0,
+      "customerSatisfaction": 0
+    },
+    "reviews": [
+      {
+        "name": "User 1",
+        "comment": "Excellent",
+        "rating": 5,
+        "date": "2024-12"
+      },
+      {
+        "name": "User 2",
+        "comment": "Variety of trips",
+        "rating": 5,
+        "date": "2024-11"
+      },
+      {
+        "name": "User 3",
+        "comment": "Highly rated",
+        "rating": 5,
+        "date": "2024-10"
+      }
+    ],
+    "isActive": true
+  },
+  {
+    "name": "Sharm El Sheikh Tours",
+    "logo": "",
+    "website": "",
+    "email": "",
+    "phone": "",
+    "location": {
+      "city": "Sharm El Sheikh",
+      "country": "Egypt"
+    },
+    "services": [
+      "Travel Booking Services",
+      "Flight Reservations",
+      "Hotel Arrangements",
+      "Customer Travel Support"
+    ],
+    "certifications": [],
+    "rating": 4.8,
+    "reviewsCount": 0,
+    "description": "Organized tours with 24/7 service and many activities.",
+    "stats": {
+      "totalBookings": 0,
+      "countriesCovered": 0,
+      "yearsInBusiness": 0,
+      "customerSatisfaction": 0
+    },
+    "reviews": [
+      {
+        "name": "User 1",
+        "comment": "Organized trips",
+        "rating": 5,
+        "date": "2024-12"
+      },
+      {
+        "name": "User 2",
+        "comment": "24/7 service",
+        "rating": 5,
+        "date": "2024-11"
+      },
+      {
+        "name": "User 3",
+        "comment": "Many activities",
+        "rating": 5,
+        "date": "2024-10"
+      }
+    ],
+    "isActive": true
+  },
+  {
+    "name": "Sharm Excursions",
+    "logo": "",
+    "website": "https://sharmexcursions.com",
+    "email": "",
+    "phone": "",
+    "location": {
+      "city": "Sharm El Sheikh",
+      "country": "Egypt"
+    },
+    "services": [
+      "Travel Booking Services",
+      "Flight Reservations",
+      "Hotel Arrangements",
+      "Customer Travel Support"
+    ],
+    "certifications": [],
+    "rating": 3,
+    "reviewsCount": 0,
+    "description": "Mixed reviews, extra costs sometimes, check details.",
+    "stats": {
+      "totalBookings": 0,
+      "countriesCovered": 0,
+      "yearsInBusiness": 0,
+      "customerSatisfaction": 0
+    },
+    "reviews": [
+      {
+        "name": "User 1",
+        "comment": "Mixed reviews",
+        "rating": 3,
+        "date": "2024-12"
+      },
+      {
+        "name": "User 2",
+        "comment": "Extra costs sometimes",
+        "rating": 3,
+        "date": "2024-11"
+      },
+      {
+        "name": "User 3",
+        "comment": "Check details",
+        "rating": 3,
+        "date": "2024-10"
+      }
+    ],
+    "isActive": true
+  },
+  {
+    "name": "Bastet Travel",
+    "logo": "",
+    "website": "http://www.bastettravel.com",
+    "email": "",
+    "phone": "+201550191399",
+    "location": {
+      "city": "Luxor",
+      "country": "Egypt"
+    },
+    "services": [
+      "Travel Booking Services",
+      "Flight Reservations",
+      "Hotel Arrangements",
+      "Customer Travel Support"
+    ],
+    "certifications": [],
+    "rating": 4.9,
+    "reviewsCount": 0,
+    "description": "Expert historical tours with deep insights into ancient Egypt.",
+    "stats": {
+      "totalBookings": 0,
+      "countriesCovered": 0,
+      "yearsInBusiness": 0,
+      "customerSatisfaction": 0
+    },
+    "reviews": [
+      {
+        "name": "User 1",
+        "comment": "Very knowledgeable guide",
+        "rating": 5,
+        "date": "2024-12"
+      }
+    ],
+    "isActive": true
+  },
+  {
+    "name": "Luxor Travels",
+    "logo": "",
+    "website": "http://www.luxortravels.com",
+    "email": "",
+    "phone": "+201224689271",
+    "location": {
+      "city": "Luxor",
+      "country": "Egypt"
+    },
+    "services": [
+      "Travel Booking Services",
+      "Flight Reservations",
+      "Hotel Arrangements",
+      "Customer Travel Support"
+    ],
+    "certifications": [],
+    "rating": 4.8,
+    "reviewsCount": 0,
+    "description": "Comfortable tours with great balloon experiences.",
+    "stats": {
+      "totalBookings": 0,
+      "countriesCovered": 0,
+      "yearsInBusiness": 0,
+      "customerSatisfaction": 0
+    },
+    "reviews": [
+      {
+        "name": "User 1",
+        "comment": "Balloon ride was amazing",
+        "rating": 5,
+        "date": "2024-12"
+      }
+    ],
+    "isActive": true
+  },
+  {
+    "name": "Queen of Luxor",
+    "logo": "",
+    "website": "",
+    "email": "",
+    "phone": "+201029914669",
+    "location": {
+      "city": "Luxor",
+      "country": "Egypt"
+    },
+    "services": [
+      "Travel Booking Services",
+      "Flight Reservations",
+      "Hotel Arrangements",
+      "Customer Travel Support"
+    ],
+    "certifications": [],
+    "rating": 4.9,
+    "reviewsCount": 0,
+    "description": "Highly professional guides with flexible private tours.",
+    "stats": {
+      "totalBookings": 0,
+      "countriesCovered": 0,
+      "yearsInBusiness": 0,
+      "customerSatisfaction": 0
+    },
+    "reviews": [
+      {
+        "name": "User 1",
+        "comment": "Excellent service",
+        "rating": 5,
+        "date": "2024-12"
+      }
+    ],
+    "isActive": true
+  },
+  {
+    "name": "Luxor and Aswan Travel",
+    "logo": "",
+    "website": "",
+    "email": "info@luxorandaswan.com",
+    "phone": "+201004880015",
+    "location": {
+      "city": "Aswan",
+      "country": "Egypt"
+    },
+    "services": [
+      "Travel Booking Services",
+      "Flight Reservations",
+      "Hotel Arrangements",
+      "Customer Travel Support"
+    ],
+    "certifications": [],
+    "rating": 4.9,
+    "reviewsCount": 0,
+    "description": "Top choice for Nile cruises and historical tours.",
+    "stats": {
+      "totalBookings": 0,
+      "countriesCovered": 0,
+      "yearsInBusiness": 0,
+      "customerSatisfaction": 0
+    },
+    "reviews": [
+      {
+        "name": "User 1",
+        "comment": "Amazing Nile cruise",
+        "rating": 5,
+        "date": "2024-12"
+      }
+    ],
+    "isActive": true
+  },
+  {
+    "name": "More Egypt Tours",
+    "logo": "",
+    "website": "",
+    "email": "",
+    "phone": "+201009644895",
+    "location": {
+      "city": "Aswan",
+      "country": "Egypt"
+    },
+    "services": [
+      "Travel Booking Services",
+      "Flight Reservations",
+      "Hotel Arrangements",
+      "Customer Travel Support"
+    ],
+    "certifications": [],
+    "rating": 4.8,
+    "reviewsCount": 0,
+    "description": "Friendly staff with well-organized tours.",
+    "stats": {
+      "totalBookings": 0,
+      "countriesCovered": 0,
+      "yearsInBusiness": 0,
+      "customerSatisfaction": 0
+    },
+    "reviews": [
+      {
+        "name": "User 1",
+        "comment": "Very punctual and organized",
+        "rating": 5,
+        "date": "2024-12"
+      }
+    ],
+    "isActive": true
+  },
+  {
+    "name": "Aswan Individual",
+    "logo": "",
+    "website": "",
+    "email": "",
+    "phone": "+201002509588",
+    "location": {
+      "city": "Aswan",
+      "country": "Egypt"
+    },
+    "services": [
+      "Travel Booking Services",
+      "Flight Reservations",
+      "Hotel Arrangements",
+      "Customer Travel Support"
+    ],
+    "certifications": [],
+    "rating": 4.8,
+    "reviewsCount": 0,
+    "description": "Authentic local experiences with flexible options.",
+    "stats": {
+      "totalBookings": 0,
+      "countriesCovered": 0,
+      "yearsInBusiness": 0,
+      "customerSatisfaction": 0
+    },
+    "reviews": [
+      {
+        "name": "User 1",
+        "comment": "Very authentic experience",
+        "rating": 5,
+        "date": "2024-12"
+      }
+    ],
+    "isActive": true
+  },
+  {
+    "name": "Shahin Tours Hurghada",
+    "logo": "",
+    "website": "http://www.shahintourshurghada.com",
+    "email": "",
+    "phone": "+201152322664",
+    "location": {
+      "city": "Hurghada",
+      "country": "Egypt"
+    },
+    "services": [
+      "Travel Booking Services",
+      "Flight Reservations",
+      "Hotel Arrangements",
+      "Customer Travel Support"
+    ],
+    "certifications": [],
+    "rating": 4.9,
+    "reviewsCount": 0,
+    "description": "Well-organized tours, friendly staff, and excellent Red Sea experiences.",
+    "stats": {
+      "totalBookings": 0,
+      "countriesCovered": 0,
+      "yearsInBusiness": 0,
+      "customerSatisfaction": 0
+    },
+    "reviews": [
+      {
+        "name": "User 1",
+        "comment": "Very organized and punctual",
+        "rating": 5,
+        "date": "2024-12"
+      },
+      {
+        "name": "User 2",
+        "comment": "Amazing snorkeling experience",
+        "rating": 5,
+        "date": "2024-11"
+      }
+    ],
+    "isActive": true
+  },
+  {
+    "name": "RA Holiday Tours Egypt",
+    "logo": "",
+    "website": "http://www.raholiday.com",
+    "email": "",
+    "phone": "+201122911218",
+    "location": {
+      "city": "Hurghada",
+      "country": "Egypt"
+    },
+    "services": [
+      "Travel Booking Services",
+      "Flight Reservations",
+      "Hotel Arrangements",
+      "Customer Travel Support"
+    ],
+    "certifications": [],
+    "rating": 4.9,
+    "reviewsCount": 0,
+    "description": "Professional tours with great value and coral reef experiences.",
+    "stats": {
+      "totalBookings": 0,
+      "countriesCovered": 0,
+      "yearsInBusiness": 0,
+      "customerSatisfaction": 0
+    },
+    "reviews": [
+      {
+        "name": "User 1",
+        "comment": "Great organization and guides",
+        "rating": 5,
+        "date": "2024-12"
+      }
+    ],
+    "isActive": true
+  },
+  {
+    "name": "Egyptra Travel Services",
+    "logo": "",
+    "website": "http://www.egyptra.pro",
+    "email": "",
+    "phone": "+201011957868",
+    "location": {
+      "city": "Hurghada",
+      "country": "Egypt"
+    },
+    "services": [
+      "Travel Booking Services",
+      "Flight Reservations",
+      "Hotel Arrangements",
+      "Customer Travel Support"
+    ],
+    "certifications": [],
+    "rating": 4.8,
+    "reviewsCount": 0,
+    "description": "Professional planning with diving and family-friendly tours.",
+    "stats": {
+      "totalBookings": 0,
+      "countriesCovered": 0,
+      "yearsInBusiness": 0,
+      "customerSatisfaction": 0
+    },
+    "reviews": [
+      {
+        "name": "User 1",
+        "comment": "Very professional team",
+        "rating": 5,
+        "date": "2024-12"
+      }
+    ],
+    "isActive": true
+  },
+  {
+    "name": "Rayna Tours Dubai",
+    "logo": "",
+    "website": "https://www.raynatours.com",
+    "email": "",
+    "phone": "+97142087444",
+    "location": {
+      "city": "Dubai",
+      "country": "UAE"
+    },
+    "services": [
+      "Travel Booking Services",
+      "Flight Reservations",
+      "Hotel Arrangements",
+      "Customer Travel Support"
+    ],
+    "certifications": [],
+    "rating": 4.8,
+    "reviewsCount": 0,
+    "description": "Well-organized Dubai tours with desert safari and city experiences.",
+    "stats": {
+      "totalBookings": 0,
+      "countriesCovered": 0,
+      "yearsInBusiness": 0,
+      "customerSatisfaction": 0
+    },
+    "reviews": [
+      {
+        "name": "User 1",
+        "comment": "Very organized tour schedules",
+        "rating": 5,
+        "date": "2024-12"
+      },
+      {
+        "name": "User 2",
+        "comment": "Professional multilingual guides",
+        "rating": 5,
+        "date": "2024-11"
+      },
+      {
+        "name": "User 3",
+        "comment": "Great desert safari experience",
+        "rating": 5,
+        "date": "2024-10"
+      }
+    ],
+    "isActive": true
+  },
+  {
+    "name": "Alemirates Tours",
+    "logo": "",
+    "website": "https://www.alemiratestours.com",
+    "email": "",
+    "phone": "+971581320909",
+    "location": {
+      "city": "Dubai",
+      "country": "UAE"
+    },
+    "services": [
+      "Travel Booking Services",
+      "Flight Reservations",
+      "Hotel Arrangements",
+      "Customer Travel Support"
+    ],
+    "certifications": [],
+    "rating": 4.6,
+    "reviewsCount": 0,
+    "description": "Friendly staff with well-planned Dubai city tours.",
+    "stats": {
+      "totalBookings": 0,
+      "countriesCovered": 0,
+      "yearsInBusiness": 0,
+      "customerSatisfaction": 0
+    },
+    "reviews": [
+      {
+        "name": "User 1",
+        "comment": "Friendly and professional staff",
+        "rating": 5,
+        "date": "2024-12"
+      }
+    ],
+    "isActive": true
+  },
+  {
+    "name": "Dubai Tour Services",
+    "logo": "",
+    "website": "https://www.dubaitourservices.com",
+    "email": "",
+    "phone": "",
+    "location": {
+      "city": "Dubai",
+      "country": "UAE"
+    },
+    "services": [
+      "Travel Booking Services",
+      "Flight Reservations",
+      "Hotel Arrangements",
+      "Customer Travel Support"
+    ],
+    "certifications": [],
+    "rating": 4.5,
+    "reviewsCount": 0,
+    "description": "Exciting desert safaris and wide range of Dubai activities.",
+    "stats": {
+      "totalBookings": 0,
+      "countriesCovered": 0,
+      "yearsInBusiness": 0,
+      "customerSatisfaction": 0
+    },
+    "reviews": [
+      {
+        "name": "User 1",
+        "comment": "Exciting desert safari experience",
+        "rating": 5,
+        "date": "2024-12"
+      }
+    ],
+    "isActive": true
+  },
+  {
+    "name": "Arabiers Qatar",
+    "logo": "",
+    "website": "https://www.arabiers.qa",
+    "email": "",
+    "phone": "+97433991975",
+    "location": {
+      "city": "Doha",
+      "country": "Qatar"
+    },
+    "services": [
+      "Travel Booking Services",
+      "Flight Reservations",
+      "Hotel Arrangements",
+      "Customer Travel Support"
+    ],
+    "certifications": [],
+    "rating": 5,
+    "reviewsCount": 0,
+    "description": "Excellent customer service and professional tour planning.",
+    "stats": {
+      "totalBookings": 0,
+      "countriesCovered": 0,
+      "yearsInBusiness": 0,
+      "customerSatisfaction": 0
+    },
+    "reviews": [
+      {
+        "name": "User 1",
+        "comment": "Excellent customer service",
+        "rating": 5,
+        "date": "2024-12"
+      }
+    ],
+    "isActive": true
+  },
+  {
+    "name": "Q Adventure & Transit Tours",
+    "logo": "",
+    "website": "https://qadventuretransit.com",
+    "email": "",
+    "phone": "+97433991975",
+    "location": {
+      "city": "Doha",
+      "country": "Qatar"
+    },
+    "services": [
+      "Travel Booking Services",
+      "Flight Reservations",
+      "Hotel Arrangements",
+      "Customer Travel Support"
+    ],
+    "certifications": [],
+    "rating": 4.8,
+    "reviewsCount": 0,
+    "description": "Friendly guides and comfortable travel experiences.",
+    "stats": {
+      "totalBookings": 0,
+      "countriesCovered": 0,
+      "yearsInBusiness": 0,
+      "customerSatisfaction": 0
+    },
+    "reviews": [
+      {
+        "name": "User 1",
+        "comment": "Friendly knowledgeable guides",
+        "rating": 5,
+        "date": "2024-12"
+      }
+    ],
+    "isActive": true
+  },
+  {
+    "name": "Crown Travel",
+    "logo": "",
+    "website": "",
+    "email": "",
+    "phone": "+962 6 222 9292",
+    "location": {
+      "city": "Amman",
+      "country": "Jordan"
+    },
+    "services": [
+      "Travel Booking Services",
+      "Flight Reservations",
+      "Hotel Arrangements",
+      "Customer Travel Support"
+    ],
+    "certifications": [],
+    "rating": 4.7,
+    "reviewsCount": 0,
+    "description": "Reliable travel agency with well-organized international trips.",
+    "stats": {
+      "totalBookings": 0,
+      "countriesCovered": 0,
+      "yearsInBusiness": 0,
+      "customerSatisfaction": 0
+    },
+    "reviews": [
+      {
+        "name": "User 1",
+        "comment": "Great experience with family trips",
+        "rating": 5,
+        "date": "2024-12"
+      }
+    ],
+    "isActive": true
+  },
+  {
+    "name": "Lawrence Tours",
+    "logo": "",
+    "website": "",
+    "email": "",
+    "phone": "+962 7 9984 8016",
+    "location": {
+      "city": "Amman",
+      "country": "Jordan"
+    },
+    "services": [
+      "Travel Booking Services",
+      "Flight Reservations",
+      "Hotel Arrangements",
+      "Customer Travel Support"
+    ],
+    "certifications": [],
+    "rating": 3.7,
+    "reviewsCount": 0,
+    "description": "International travel services with mixed reviews.",
+    "stats": {
+      "totalBookings": 0,
+      "countriesCovered": 0,
+      "yearsInBusiness": 0,
+      "customerSatisfaction": 0
+    },
+    "reviews": [
+      {
+        "name": "User 1",
+        "comment": "Good service",
+        "rating": 4,
+        "date": "2024-12"
+      }
+    ],
+    "isActive": true
+  },
+  {
+    "name": "LEBANON TOURS AND TRAVELS",
+    "logo": "",
+    "website": "",
+    "email": "",
+    "phone": "+961 70767 686",
+    "location": {
+      "city": "Beirut",
+      "country": "Lebanon"
+    },
+    "services": [
+      "Travel Booking Services",
+      "Flight Reservations",
+      "Hotel Arrangements",
+      "Customer Travel Support"
+    ],
+    "certifications": [],
+    "rating": 4.9,
+    "reviewsCount": 0,
+    "description": "Well-organized tours across Lebanon with excellent guides.",
+    "stats": {
+      "totalBookings": 0,
+      "countriesCovered": 0,
+      "yearsInBusiness": 0,
+      "customerSatisfaction": 0
+    },
+    "reviews": [
+      {
+        "name": "User 1",
+        "comment": "Very well organized trip",
+        "rating": 5,
+        "date": "2024-12"
+      }
+    ],
+    "isActive": true
+  },
+  {
+    "name": "Nakhal Tourism and Travel",
+    "logo": "",
+    "website": "",
+    "email": "",
+    "phone": "+961 1 389 389",
+    "location": {
+      "city": "Beirut",
+      "country": "Lebanon"
+    },
+    "services": [
+      "Travel Booking Services",
+      "Flight Reservations",
+      "Hotel Arrangements",
+      "Customer Travel Support"
+    ],
+    "certifications": [],
+    "rating": 4.2,
+    "reviewsCount": 0,
+    "description": "Trusted agency with long experience in travel services.",
+    "stats": {
+      "totalBookings": 0,
+      "countriesCovered": 0,
+      "yearsInBusiness": 0,
+      "customerSatisfaction": 0
+    },
+    "reviews": [
+      {
+        "name": "User 1",
+        "comment": "Very professional service",
+        "rating": 4,
+        "date": "2024-12"
+      }
+    ],
+    "isActive": true
+  },
+  {
+    "name": "Jewar Al Safwah International Travel & Tourism",
+    "logo": "",
+    "website": "https://www.jewaralsafwahsa.com",
+    "email": "",
+    "phone": "+966 9200 33253",
+    "location": {
+      "city": "Makkah",
+      "country": "Saudi Arabia"
+    },
+    "services": [
+      "Travel Booking Services",
+      "Flight Reservations",
+      "Hotel Arrangements",
+      "Customer Travel Support"
+    ],
+    "certifications": [],
+    "rating": 4.8,
+    "reviewsCount": 0,
+    "description": "Professional Umrah and Hajj services with excellent coordination.",
+    "stats": {
+      "totalBookings": 0,
+      "countriesCovered": 0,
+      "yearsInBusiness": 0,
+      "customerSatisfaction": 0
+    },
+    "reviews": [
+      {
+        "name": "User 1",
+        "comment": "Very organized Umrah trip",
+        "rating": 5,
+        "date": "2024-12"
+      }
+    ],
+    "isActive": true
+  },
+  {
+    "name": "The Golden Travel & Tourism",
+    "logo": "",
+    "website": "",
+    "email": "",
+    "phone": "+966 56 038 7808",
+    "location": {
+      "city": "Makkah",
+      "country": "Saudi Arabia"
+    },
+    "services": [
+      "Travel Booking Services",
+      "Flight Reservations",
+      "Hotel Arrangements",
+      "Customer Travel Support"
+    ],
+    "certifications": [],
+    "rating": 4.9,
+    "reviewsCount": 0,
+    "description": "Fast booking and well-organized pilgrimage services.",
+    "stats": {
+      "totalBookings": 0,
+      "countriesCovered": 0,
+      "yearsInBusiness": 0,
+      "customerSatisfaction": 0
+    },
+    "reviews": [
+      {
+        "name": "User 1",
+        "comment": "Excellent service and organization",
+        "rating": 5,
+        "date": "2024-12"
+      }
+    ],
+    "isActive": true
+  },
+  {
+    "name": "Taiba Flocks Travel Agency",
+    "logo": "",
+    "website": "https://taibaflocks.sa",
+    "email": "",
+    "phone": "+966 9200 33305",
+    "location": {
+      "city": "Al Madinah",
+      "country": "Saudi Arabia"
+    },
+    "services": [
+      "Travel Booking Services",
+      "Flight Reservations",
+      "Hotel Arrangements",
+      "Customer Travel Support"
+    ],
+    "certifications": [],
+    "rating": 4.5,
+    "reviewsCount": 0,
+    "description": "Well-organized Hajj and Umrah group services.",
+    "stats": {
+      "totalBookings": 0,
+      "countriesCovered": 0,
+      "yearsInBusiness": 0,
+      "customerSatisfaction": 0
+    },
+    "reviews": [
+      {
+        "name": "User 1",
+        "comment": "Very organized pilgrimage",
+        "rating": 5,
+        "date": "2024-12"
+      }
+    ],
+    "isActive": true
+  },
+  {
+    "name": "Traveliun Tour Agency",
+    "logo": "",
+    "website": "https://traveliun.com.sa",
+    "email": "",
+    "phone": "+966 56 922 2111",
+    "location": {
+      "city": "Madinah",
+      "country": "Saudi Arabia"
+    },
+    "services": [
+      "Travel Booking Services",
+      "Flight Reservations",
+      "Hotel Arrangements",
+      "Customer Travel Support"
+    ],
+    "certifications": [],
+    "rating": 4.6,
+    "reviewsCount": 0,
+    "description": "Guided religious tours with smooth coordination.",
+    "stats": {
+      "totalBookings": 0,
+      "countriesCovered": 0,
+      "yearsInBusiness": 0,
+      "customerSatisfaction": 0
+    },
+    "reviews": [
+      {
+        "name": "User 1",
+        "comment": "Great guided tours",
+        "rating": 5,
+        "date": "2024-12"
+      }
+    ],
+    "isActive": true
+  },
+  {
+    "name": "Formula Travel Agency",
+    "logo": "",
+    "website": "https://formula.com.sa",
+    "email": "",
+    "phone": "+966 9200 04080",
+    "location": {
+      "city": "Jeddah",
+      "country": "Saudi Arabia"
+    },
+    "services": [
+      "Travel Booking Services",
+      "Flight Reservations",
+      "Hotel Arrangements",
+      "Customer Travel Support"
+    ],
+    "certifications": [],
+    "rating": 4.4,
+    "reviewsCount": 0,
+    "description": "Reliable booking system for flights and tours.",
+    "stats": {
+      "totalBookings": 0,
+      "countriesCovered": 0,
+      "yearsInBusiness": 0,
+      "customerSatisfaction": 0
+    },
+    "reviews": [
+      {
+        "name": "User 1",
+        "comment": "Fast and reliable booking",
+        "rating": 5,
+        "date": "2024-12"
+      }
+    ],
+    "isActive": true
+  },
+  {
+    "name": "Red Sea Tours & Travels",
+    "logo": "",
+    "website": "",
+    "email": "",
+    "phone": "+966 57 184 8418",
+    "location": {
+      "city": "Jeddah",
+      "country": "Saudi Arabia"
+    },
+    "services": [
+      "Travel Booking Services",
+      "Flight Reservations",
+      "Hotel Arrangements",
+      "Customer Travel Support"
+    ],
+    "certifications": [],
+    "rating": 4.9,
+    "reviewsCount": 0,
+    "description": "Excellent sea trips and group travel experiences.",
+    "stats": {
+      "totalBookings": 0,
+      "countriesCovered": 0,
+      "yearsInBusiness": 0,
+      "customerSatisfaction": 0
+    },
+    "reviews": [
+      {
+        "name": "User 1",
+        "comment": "Amazing sea trips",
+        "rating": 5,
+        "date": "2024-12"
+      }
+    ],
+    "isActive": true
+  },
+  {
+    "name": "OceanAir Travels",
+    "logo": "",
+    "website": "https://www.oceanairtravels.com",
+    "email": "",
+    "phone": "+971556495103",
+    "location": {
+      "city": "Abu Dhabi",
+      "country": "UAE"
+    },
+    "services": [
+      "Travel Booking Services",
+      "Flight Reservations",
+      "Hotel Arrangements",
+      "Customer Travel Support"
+    ],
+    "certifications": [],
+    "rating": 4.9,
+    "reviewsCount": 0,
+    "description": "Highly professional desert safari and city tours.",
+    "stats": {
+      "totalBookings": 0,
+      "countriesCovered": 0,
+      "yearsInBusiness": 0,
+      "customerSatisfaction": 0
+    },
+    "reviews": [
+      {
+        "name": "User 1",
+        "comment": "Excellent safari experience",
+        "rating": 5,
+        "date": "2024-12"
+      }
+    ],
+    "isActive": true
+  },
+  {
+    "name": "Arabian Adventures",
+    "logo": "",
+    "website": "https://www.arabian-adventures.com",
+    "email": "",
+    "phone": "+97143034888",
+    "location": {
+      "city": "Abu Dhabi",
+      "country": "UAE"
+    },
+    "services": [
+      "Travel Booking Services",
+      "Flight Reservations",
+      "Hotel Arrangements",
+      "Customer Travel Support"
+    ],
+    "certifications": [],
+    "rating": 4.8,
+    "reviewsCount": 0,
+    "description": "Luxury desert safari and cultural tours.",
+    "stats": {
+      "totalBookings": 0,
+      "countriesCovered": 0,
+      "yearsInBusiness": 0,
+      "customerSatisfaction": 0
+    },
+    "reviews": [
+      {
+        "name": "User 1",
+        "comment": "Luxury safari experience",
+        "rating": 5,
+        "date": "2024-12"
+      }
+    ],
+    "isActive": true
+  },
+  {
+    "name": "Desert Rose Tourism",
+    "logo": "",
+    "website": "https://www.desertrosetourism.ae",
+    "email": "",
+    "phone": "+97126505500",
+    "location": {
+      "city": "Abu Dhabi",
+      "country": "UAE"
+    },
+    "services": [
+      "Travel Booking Services",
+      "Flight Reservations",
+      "Hotel Arrangements",
+      "Customer Travel Support"
+    ],
+    "certifications": [],
+    "rating": 4.7,
+    "reviewsCount": 0,
+    "description": "Well-organized family and group tours.",
+    "stats": {
+      "totalBookings": 0,
+      "countriesCovered": 0,
+      "yearsInBusiness": 0,
+      "customerSatisfaction": 0
+    },
+    "reviews": [
+      {
+        "name": "User 1",
+        "comment": "Great family tour experience",
+        "rating": 5,
+        "date": "2024-12"
+      }
+    ],
+    "isActive": true
+  },
+  {
+    "name": "Travel Center",
+    "logo": "",
+    "website": "https://travelcenter.uk",
+    "email": "",
+    "phone": "+44 20 7612 0598",
+    "location": {
+      "city": "London",
+      "country": "UK"
+    },
+    "services": [
+      "Travel Booking Services",
+      "Flight Reservations",
+      "Hotel Arrangements",
+      "Customer Travel Support"
+    ],
+    "certifications": [],
+    "rating": 4.9,
+    "reviewsCount": 5272,
+    "description": "Travel agency offering global holiday packages and tailor-made trips.",
+    "stats": {
+      "totalBookings": 0,
+      "countriesCovered": 0,
+      "yearsInBusiness": 0,
+      "customerSatisfaction": 0
+    },
+    "reviews": [
+      {
+        "name": "User 1",
+        "comment": "9 nights Japan + 5 nights Bali at a fantastic price — smooth from start to finish.",
+        "rating": 5,
+        "date": "2024-12"
+      },
+      {
+        "name": "User 2",
+        "comment": "First safari with Travel Centre — excellent service from Ted & Matilda.",
+        "rating": 5,
+        "date": "2024-11"
+      },
+      {
+        "name": "User 3",
+        "comment": "Andy was incredibly patient and helpful with all changes.",
+        "rating": 5,
+        "date": "2024-10"
+      }
+    ],
+    "isActive": true
+  },
+  {
+    "name": "Travel House UK",
+    "logo": "",
+    "website": "https://travelhouseuk.co.uk",
+    "email": "",
+    "phone": "+44 20 7183 8841",
+    "location": {
+      "city": "London",
+      "country": "UK"
+    },
+    "services": [
+      "Travel Booking Services",
+      "Flight Reservations",
+      "Hotel Arrangements",
+      "Customer Travel Support"
+    ],
+    "certifications": [],
+    "rating": 4.7,
+    "reviewsCount": 2673,
+    "description": "UK-based travel agency offering flight and holiday bookings.",
+    "stats": {
+      "totalBookings": 0,
+      "countriesCovered": 0,
+      "yearsInBusiness": 0,
+      "customerSatisfaction": 0
+    },
+    "reviews": [
+      {
+        "name": "User 1",
+        "comment": "Gordon was patient and professional — very smooth booking.",
+        "rating": 5,
+        "date": "2024-12"
+      },
+      {
+        "name": "User 2",
+        "comment": "Jessica made finding affordable tickets easy.",
+        "rating": 5,
+        "date": "2024-11"
+      },
+      {
+        "name": "User 3",
+        "comment": "Addy McGuire has excellent customer service.",
+        "rating": 5,
+        "date": "2024-10"
+      }
+    ],
+    "isActive": true
+  },
+  {
+    "name": "Crystal Travel",
+    "logo": "",
+    "website": "https://crystaltravel.co.uk",
+    "email": "",
+    "phone": "+44 20 7612 0500",
+    "location": {
+      "city": "London",
+      "country": "UK"
+    },
+    "services": [
+      "Travel Booking Services",
+      "Flight Reservations",
+      "Hotel Arrangements",
+      "Customer Travel Support"
+    ],
+    "certifications": [],
+    "rating": 4.6,
+    "reviewsCount": 5551,
+    "description": "Competitive flight deals and international travel packages.",
+    "stats": {
+      "totalBookings": 0,
+      "countriesCovered": 0,
+      "yearsInBusiness": 0,
+      "customerSatisfaction": 0
+    },
+    "reviews": [
+      {
+        "name": "User 1",
+        "comment": "Great deal on flights to Melbourne — very flexible.",
+        "rating": 5,
+        "date": "2024-12"
+      },
+      {
+        "name": "User 2",
+        "comment": "Reliable and friendly service for years.",
+        "rating": 5,
+        "date": "2024-11"
+      },
+      {
+        "name": "User 3",
+        "comment": "Quick responses and good packages.",
+        "rating": 5,
+        "date": "2024-10"
+      }
+    ],
+    "isActive": true
+  },
+  {
+    "name": "Aspire Down Under",
+    "logo": "",
+    "website": "https://aspiredownunder.com",
+    "email": "",
+    "phone": "+1 212-850-0946",
+    "location": {
+      "city": "New York",
+      "country": "USA"
+    },
+    "services": [
+      "Travel Booking Services",
+      "Flight Reservations",
+      "Hotel Arrangements",
+      "Customer Travel Support"
+    ],
+    "certifications": [],
+    "rating": 5,
+    "reviewsCount": 202,
+    "description": "Specialized travel agency for luxury Australia and global trips.",
+    "stats": {
+      "totalBookings": 0,
+      "countriesCovered": 0,
+      "yearsInBusiness": 0,
+      "customerSatisfaction": 0
+    },
+    "reviews": [
+      {
+        "name": "User 1",
+        "comment": "Perfect 14-day Australia trip — everything was handled.",
+        "rating": 5,
+        "date": "2024-12"
+      },
+      {
+        "name": "User 2",
+        "comment": "Seamless itinerary with unique experiences.",
+        "rating": 5,
+        "date": "2024-11"
+      },
+      {
+        "name": "User 3",
+        "comment": "Quick response and excellent planning.",
+        "rating": 5,
+        "date": "2024-10"
+      }
+    ],
+    "isActive": true
+  },
+  {
+    "name": "Chubit Travel",
+    "logo": "",
+    "website": "https://chubit.com",
+    "email": "",
+    "phone": "+1 866-924-8248",
+    "location": {
+      "city": "New York",
+      "country": "USA"
+    },
+    "services": [
+      "Travel Booking Services",
+      "Flight Reservations",
+      "Hotel Arrangements",
+      "Customer Travel Support"
+    ],
+    "certifications": [],
+    "rating": 4.9,
+    "reviewsCount": 139,
+    "description": "Customer-focused travel agency with emergency support services.",
+    "stats": {
+      "totalBookings": 0,
+      "countriesCovered": 0,
+      "yearsInBusiness": 0,
+      "customerSatisfaction": 0
+    },
+    "reviews": [
+      {
+        "name": "User 1",
+        "comment": "Helped us during cancellation and refund process.",
+        "rating": 5,
+        "date": "2024-12"
+      },
+      {
+        "name": "User 2",
+        "comment": "Very supportive even during emergencies.",
+        "rating": 5,
+        "date": "2024-11"
+      },
+      {
+        "name": "User 3",
+        "comment": "Exceptional service quality.",
+        "rating": 5,
+        "date": "2024-10"
+      }
+    ],
+    "isActive": true
+  },
+  {
+    "name": "Tinma Travel Agency",
+    "logo": "",
+    "website": "https://tinma-mjv.com",
+    "email": "",
+    "phone": "+1 212-385-1688",
+    "location": {
+      "city": "New York",
+      "country": "USA"
+    },
+    "services": [
+      "Travel Booking Services",
+      "Flight Reservations",
+      "Hotel Arrangements",
+      "Customer Travel Support"
+    ],
+    "certifications": [],
+    "rating": 4.1,
+    "reviewsCount": 411,
+    "description": "Organized domestic US tours and travel packages.",
+    "stats": {
+      "totalBookings": 0,
+      "countriesCovered": 0,
+      "yearsInBusiness": 0,
+      "customerSatisfaction": 0
+    },
+    "reviews": [
+      {
+        "name": "User 1",
+        "comment": "Well organized Yellowstone tour.",
+        "rating": 5,
+        "date": "2024-12"
+      },
+      {
+        "name": "User 2",
+        "comment": "Great coordination and timing.",
+        "rating": 4,
+        "date": "2024-11"
+      },
+      {
+        "name": "User 3",
+        "comment": "Polite and professional staff.",
+        "rating": 4,
+        "date": "2024-10"
+      }
+    ],
+    "isActive": true
+  },
+  {
+    "name": "ANA LA Travel",
+    "logo": "",
+    "website": "https://analatravel.com",
+    "email": "",
+    "phone": "+1 818-272-8191",
+    "location": {
+      "city": "Los Angeles",
+      "country": "USA"
+    },
+    "services": [
+      "Travel Booking Services",
+      "Flight Reservations",
+      "Hotel Arrangements",
+      "Customer Travel Support"
+    ],
+    "certifications": [],
+    "rating": 4.9,
+    "reviewsCount": 213,
+    "description": "Travel agency offering US and international tour packages.",
+    "stats": {
+      "totalBookings": 0,
+      "countriesCovered": 0,
+      "yearsInBusiness": 0,
+      "customerSatisfaction": 0
+    },
+    "reviews": [
+      {
+        "name": "User 1",
+        "comment": "Perfectly planned Zion & Bryce Canyon tour.",
+        "rating": 5,
+        "date": "2024-12"
+      },
+      {
+        "name": "User 2",
+        "comment": "Professional and high-quality hotels.",
+        "rating": 5,
+        "date": "2024-11"
+      },
+      {
+        "name": "User 3",
+        "comment": "Outstanding Thailand trip coordination.",
+        "rating": 5,
+        "date": "2024-10"
+      }
+    ],
+    "isActive": true
+  },
+  {
+    "name": "Happy Tours Travel Agency",
+    "logo": "",
+    "website": "https://happytourstravel.com",
+    "email": "",
+    "phone": "+1 213-252-8559",
+    "location": {
+      "city": "Los Angeles",
+      "country": "USA"
+    },
+    "services": [
+      "Travel Booking Services",
+      "Flight Reservations",
+      "Hotel Arrangements",
+      "Customer Travel Support"
+    ],
+    "certifications": [],
+    "rating": 4.5,
+    "reviewsCount": 430,
+    "description": "Personalized travel experiences and competitive pricing.",
+    "stats": {
+      "totalBookings": 0,
+      "countriesCovered": 0,
+      "yearsInBusiness": 0,
+      "customerSatisfaction": 0
+    },
+    "reviews": [
+      {
+        "name": "User 1",
+        "comment": "Very professional and friendly staff.",
+        "rating": 5,
+        "date": "2024-12"
+      }
+    ],
+    "isActive": true
+  },
+  {
+    "name": "All-Travel",
+    "logo": "",
+    "website": "https://all-travel.com",
+    "email": "",
+    "phone": "+1 800-300-4567",
+    "location": {
+      "city": "Los Angeles",
+      "country": "USA"
+    },
+    "services": [
+      "Travel Booking Services",
+      "Flight Reservations",
+      "Hotel Arrangements",
+      "Customer Travel Support"
+    ],
+    "certifications": [],
+    "rating": 4.6,
+    "reviewsCount": 53,
+    "description": "Corporate and leisure travel planning specialists.",
+    "stats": {
+      "totalBookings": 0,
+      "countriesCovered": 0,
+      "yearsInBusiness": 0,
+      "customerSatisfaction": 0
+    },
+    "reviews": [
+      {
+        "name": "User 1",
+        "comment": "Very reliable corporate travel service.",
+        "rating": 5,
+        "date": "2024-12"
+      }
+    ],
+    "isActive": true
+  },
+  {
+    "name": "Riyadh Travel and Tourism",
+    "logo": "",
+    "website": "",
+    "email": "",
+    "phone": "+966 9200 22228",
+    "location": {
+      "city": "Riyadh",
+      "country": "Saudi Arabia"
+    },
+    "services": [
+      "Travel Booking Services",
+      "Flight Reservations",
+      "Hotel Arrangements",
+      "Customer Travel Support"
+    ],
+    "certifications": [],
+    "rating": 4,
+    "reviewsCount": 387,
+    "description": "Travel agency offering international tour packages and visa services.",
+    "stats": {
+      "totalBookings": 0,
+      "countriesCovered": 0,
+      "yearsInBusiness": 0,
+      "customerSatisfaction": 0
+    },
+    "reviews": [
+      {
+        "name": "User 1",
+        "comment": "Highly professional service with excellent trip organization.",
+        "rating": 5,
+        "date": "2024-12"
+      },
+      {
+        "name": "User 2",
+        "comment": "Great support before and during travel.",
+        "rating": 5,
+        "date": "2024-11"
+      }
+    ],
+    "isActive": true
+  },
+  {
+    "name": "Riyadh Travel and Tourism - Seville Branch",
+    "logo": "",
+    "website": "",
+    "email": "",
+    "phone": "+966 11 278 8972",
+    "location": {
+      "city": "Riyadh",
+      "country": "Saudi Arabia"
+    },
+    "services": [
+      "Travel Booking Services",
+      "Flight Reservations",
+      "Hotel Arrangements",
+      "Customer Travel Support"
+    ],
+    "certifications": [],
+    "rating": 4.6,
+    "reviewsCount": 451,
+    "description": "Professional travel agency branch with organized booking and travel services.",
+    "stats": {
+      "totalBookings": 0,
+      "countriesCovered": 0,
+      "yearsInBusiness": 0,
+      "customerSatisfaction": 0
+    },
+    "reviews": [
+      {
+        "name": "User 1",
+        "comment": "Very professional and smooth booking experience.",
+        "rating": 5,
+        "date": "2024-12"
+      }
+    ],
+    "isActive": true
+  },
+  {
+    "name": "Al Sarh Tourism and Travel",
+    "logo": "",
+    "website": "",
+    "email": "",
+    "phone": "+966 11 494 1111",
+    "location": {
+      "city": "Riyadh",
+      "country": "Saudi Arabia"
+    },
+    "services": [
+      "Full Travel Packages",
+      "Honeymoon Trips",
+      "Hotel Booking",
+      "Flight Booking",
+      "Corporate Travel Solutions"
+    ],
+    "certifications": [],
+    "rating": 3.8,
+    "reviewsCount": 2000,
+    "description": "Established travel agency offering full-service travel and tourism solutions.",
+    "stats": {
+      "totalBookings": 0,
+      "countriesCovered": 0,
+      "yearsInBusiness": 45,
+      "customerSatisfaction": 0
+    },
+    "reviews": [
+      {
+        "name": "User 1",
+        "comment": "Everything was perfectly organized for our honeymoon trip.",
+        "rating": 5,
+        "date": "2024-12"
+      },
+      {
+        "name": "User 2",
+        "comment": "Highly trusted agency with long experience.",
+        "rating": 5,
+        "date": "2024-11"
+      }
+    ],
+    "isActive": true
+  },
+
+
+  
+  {
+    "name": "Paris Vision Travel",
+    "logo": "",
+    "website": "https://parisvision.com",
+    "email": "info@parisvision.com",
+    "phone": "+33 1 45 23 45 67",
+    "location": { "city": "Paris", "country": "France" },
+    "services": ["Eiffel Tower Tours", "Louvre Museum Visits", "City Sightseeing", "Hotel Booking"],
+    "certifications": [],
+    "rating": 4.7,
+    "reviewsCount": 1200,
+    "description": "Paris sightseeing and cultural travel experiences.",
+    "stats": { "totalBookings": 0, "countriesCovered": 0, "yearsInBusiness": 0, "customerSatisfaction": 0 },
+    "reviews": [{ "name": "User 1", "comment": "Amazing Eiffel Tower experience", "rating": 5, "date": "2024-12" }],
+    "isActive": true
+  },
+  {
+    "name": "Paris Explorer Agency",
+    "logo": "",
+    "website": "https://parisexplorer.com",
+    "email": "info@parisexplorer.com",
+    "phone": "+33 1 40 22 11 90",
+    "location": { "city": "Paris", "country": "France" },
+    "services": ["Seine River Cruises", "Walking Tours", "Disneyland Paris Trips", "Airport Transfers"],
+    "certifications": [],
+    "rating": 4.6,
+    "reviewsCount": 980,
+    "description": "Guided tours across Paris attractions and experiences.",
+    "stats": { "totalBookings": 0, "countriesCovered": 0, "yearsInBusiness": 0, "customerSatisfaction": 0 },
+    "reviews": [{ "name": "User 1", "comment": "Very well organized tours", "rating": 5, "date": "2024-11" }],
+    "isActive": true
+  },
+  {
+    "name": "Elite Paris Tours",
+    "logo": "",
+    "website": "https://eliteparistours.com",
+    "email": "info@eliteparistours.com",
+    "phone": "+33 1 55 77 88 99",
+    "location": { "city": "Paris", "country": "France" },
+    "services": ["Luxury Tours", "Private Guides", "Romantic Packages", "Hotel Booking"],
+    "certifications": [],
+    "rating": 4.8,
+    "reviewsCount": 650,
+    "description": "Premium luxury travel experiences in Paris.",
+    "stats": { "totalBookings": 0, "countriesCovered": 0, "yearsInBusiness": 0, "customerSatisfaction": 0 },
+    "reviews": [{ "name": "User 1", "comment": "Luxury experience was perfect", "rating": 5, "date": "2024-12" }],
+    "isActive": true
+  },
+
+
+
+  
+  {
+    "name": "Roma Travel Experts",
+    "logo": "",
+    "website": "https://romatravelexperts.com",
+    "email": "info@romatravelexperts.com",
+    "phone": "+39 06 1234 5678",
+    "location": { "city": "Rome", "country": "Italy" },
+    "services": ["Colosseum Tours", "Vatican Visits", "City Walking Tours", "Hotel Booking"],
+    "certifications": [],
+    "rating": 4.6,
+    "reviewsCount": 980,
+    "description": "Historical and cultural Rome travel experiences.",
+    "stats": { "totalBookings": 0, "countriesCovered": 0, "yearsInBusiness": 0, "customerSatisfaction": 0 },
+    "reviews": [{ "name": "User 1", "comment": "Colosseum tour was amazing", "rating": 5, "date": "2024-12" }],
+    "isActive": true
+  },
+  {
+    "name": "Rome Heritage Tours",
+    "logo": "",
+    "website": "https://romeheritagetours.com",
+    "email": "info@romeheritagetours.com",
+    "phone": "+39 06 9988 7766",
+    "location": { "city": "Rome", "country": "Italy" },
+    "services": ["Ancient Rome Tours", "Food Tours", "Museums Visits", "Transport Services"],
+    "certifications": [],
+    "rating": 4.5,
+    "reviewsCount": 870,
+    "description": "Authentic Roman heritage experiences.",
+    "stats": { "totalBookings": 0, "countriesCovered": 0, "yearsInBusiness": 0, "customerSatisfaction": 0 },
+    "reviews": [{ "name": "User 1", "comment": "Great food and history tour", "rating": 5, "date": "2024-11" }],
+    "isActive": true
+  },
+  {
+    "name": "Imperial Rome Travel",
+    "logo": "",
+    "website": "https://imperialrometravel.com",
+    "email": "info@imperialrometravel.com",
+    "phone": "+39 06 1122 3344",
+    "location": { "city": "Rome", "country": "Italy" },
+    "services": ["Luxury Tours", "Private Guides", "Vatican VIP Access", "Hotel Booking"],
+    "certifications": [],
+    "rating": 4.8,
+    "reviewsCount": 540,
+    "description": "Premium luxury Roman travel experiences.",
+    "stats": { "totalBookings": 0, "countriesCovered": 0, "yearsInBusiness": 0, "customerSatisfaction": 0 },
+    "reviews": [{ "name": "User 1", "comment": "VIP Vatican tour was incredible", "rating": 5, "date": "2024-12" }],
+    "isActive": true
+  },
+
+
+
+
+  
+  {
+    "name": "Barcelona Travel Hub",
+    "logo": "",
+    "website": "https://barcelonatravelhub.com",
+    "email": "info@barcelonatravelhub.com",
+    "phone": "+34 93 123 4567",
+    "location": { "city": "Barcelona", "country": "Spain" },
+    "services": ["Sagrada Familia Tours", "City Sightseeing", "Beach Trips", "Hotel Booking"],
+    "certifications": [],
+    "rating": 4.7,
+    "reviewsCount": 1100,
+    "description": "Barcelona cultural and beach travel experiences.",
+    "stats": { "totalBookings": 0, "countriesCovered": 0, "yearsInBusiness": 0, "customerSatisfaction": 0 },
+    "reviews": [{ "name": "User 1", "comment": "Beautiful city tour", "rating": 5, "date": "2024-12" }],
+    "isActive": true
+  },
+  {
+    "name": "Catalonia Explorer Tours",
+    "logo": "",
+    "website": "https://cataloniaexplorer.com",
+    "email": "info@cataloniaexplorer.com",
+    "phone": "+34 93 555 6677",
+    "location": { "city": "Barcelona", "country": "Spain" },
+    "services": ["Montserrat Trips", "Wine Tours", "Football Stadium Tours", "Transport"],
+    "certifications": [],
+    "rating": 4.6,
+    "reviewsCount": 890,
+    "description": "Exploring Catalonia region experiences.",
+    "stats": { "totalBookings": 0, "countriesCovered": 0, "yearsInBusiness": 0, "customerSatisfaction": 0 },
+    "reviews": [{ "name": "User 1", "comment": "Wine tour was excellent", "rating": 5, "date": "2024-11" }],
+    "isActive": true
+  },
+  {
+    "name": "Barcelona Elite Travel",
+    "logo": "",
+    "website": "https://barcelonaelitetravel.com",
+    "email": "info@barcelonaelitetravel.com",
+    "phone": "+34 93 778 8899",
+    "location": { "city": "Barcelona", "country": "Spain" },
+    "services": ["Luxury Tours", "Private Guides", "Romantic Packages", "Hotel Booking"],
+    "certifications": [],
+    "rating": 4.8,
+    "reviewsCount": 620,
+    "description": "Luxury travel experiences in Barcelona.",
+    "stats": { "totalBookings": 0, "countriesCovered": 0, "yearsInBusiness": 0, "customerSatisfaction": 0 },
+    "reviews": [{ "name": "User 1", "comment": "Perfect honeymoon trip", "rating": 5, "date": "2024-12" }],
+    "isActive": true
+  },
+
+
+
+  
+  {
+    "name": "Tokyo Wander Travel",
+    "logo": "",
+    "website": "https://tokyowander.jp",
+    "email": "info@tokyowander.jp",
+    "phone": "+81 3 1234 5678",
+    "location": { "city": "Tokyo", "country": "Japan" },
+    "services": ["Tokyo City Tours", "Mount Fuji Day Trips", "Cultural Experiences", "Hotel Booking"],
+    "certifications": [],
+    "rating": 4.8,
+    "reviewsCount": 1500,
+    "description": "Tokyo cultural and modern travel experiences.",
+    "stats": { "totalBookings": 0, "countriesCovered": 0, "yearsInBusiness": 0, "customerSatisfaction": 0 },
+    "reviews": [
+      { "name": "User 1", "comment": "Mount Fuji trip was unforgettable", "rating": 5, "date": "2024-12" }
+    ],
+    "isActive": true
+  },
+  {
+    "name": "Japan Explorer Tours",
+    "logo": "",
+    "website": "https://japanexplorertours.com",
+    "email": "info@japanexplorertours.com",
+    "phone": "+81 3 5566 7788",
+    "location": { "city": "Tokyo", "country": "Japan" },
+    "services": ["Shibuya & Shinjuku Tours", "Anime District Tours", "Food Tours", "Transport Services"],
+    "certifications": [],
+    "rating": 4.7,
+    "reviewsCount": 980,
+    "description": "Modern Tokyo lifestyle and entertainment tours.",
+    "stats": { "totalBookings": 0, "countriesCovered": 0, "yearsInBusiness": 0, "customerSatisfaction": 0 },
+    "reviews": [
+      { "name": "User 1", "comment": "Anime tour was amazing", "rating": 5, "date": "2024-11" }
+    ],
+    "isActive": true
+  },
+  {
+    "name": "Sakura Elite Travel",
+    "logo": "",
+    "website": "https://sakuraelitetravel.jp",
+    "email": "info@sakuraelitetravel.jp",
+    "phone": "+81 3 9988 1122",
+    "location": { "city": "Tokyo", "country": "Japan" },
+    "services": ["Luxury Tours", "Private Guides", "Traditional Experiences", "Hotel Booking"],
+    "certifications": [],
+    "rating": 4.9,
+    "reviewsCount": 640,
+    "description": "Premium luxury and traditional Japanese experiences.",
+    "stats": { "totalBookings": 0, "countriesCovered": 0, "yearsInBusiness": 0, "customerSatisfaction": 0 },
+    "reviews": [
+      { "name": "User 1", "comment": "Very authentic cultural experience", "rating": 5, "date": "2024-12" }
+    ],
+    "isActive": true
+  }
+,
+
+
+
+  {
+    "name": "Maldives Luxury Escapes",
+    "logo": "",
+    "website": "https://maldivesluxuryescapes.com",
+    "email": "info@maldivesluxuryescapes.com",
+    "phone": "+960 123 4567",
+    "location": { "city": "Maldives", "country": "Maldives" },
+    "services": ["Resort Booking", "Honeymoon Packages", "Island Hopping", "Private Yacht Trips"],
+    "certifications": [],
+    "rating": 5.0,
+    "reviewsCount": 900,
+    "description": "Luxury island travel and honeymoon specialists.",
+    "stats": { "totalBookings": 0, "countriesCovered": 0, "yearsInBusiness": 0, "customerSatisfaction": 0 },
+    "reviews": [
+      { "name": "User 1", "comment": "Best honeymoon experience ever", "rating": 5, "date": "2024-12" }
+    ],
+    "isActive": true
+  },
+  {
+    "name": "Island Dream Travels Maldives",
+    "logo": "",
+    "website": "https://islanddreammaldives.com",
+    "email": "info@islanddreammaldives.com",
+    "phone": "+960 777 8899",
+    "location": { "city": "Maldives", "country": "Maldives" },
+    "services": ["Budget Island Packages", "Diving Trips", "Snorkeling Tours", "Hotel Booking"],
+    "certifications": [],
+    "rating": 4.7,
+    "reviewsCount": 750,
+    "description": "Affordable Maldives island experiences.",
+    "stats": { "totalBookings": 0, "countriesCovered": 0, "yearsInBusiness": 0, "customerSatisfaction": 0 },
+    "reviews": [
+      { "name": "User 1", "comment": "Great snorkeling experience", "rating": 5, "date": "2024-11" }
+    ],
+    "isActive": true
+  },
+  {
+    "name": "Ocean Bliss Maldives Tours",
+    "logo": "",
+    "website": "https://oceanblissmaldives.com",
+    "email": "info@oceanblissmaldives.com",
+    "phone": "+960 444 5566",
+    "location": { "city": "Maldives", "country": "Maldives" },
+    "services": ["Luxury Cruises", "Private Villas", "Romantic Packages", "Airport Transfers"],
+    "certifications": [],
+    "rating": 4.9,
+    "reviewsCount": 620,
+    "description": "Premium ocean and island luxury experiences.",
+    "stats": { "totalBookings": 0, "countriesCovered": 0, "yearsInBusiness": 0, "customerSatisfaction": 0 },
+    "reviews": [
+      { "name": "User 1", "comment": "Incredible villa experience", "rating": 5, "date": "2024-12" }
+    ],
+    "isActive": true
+  },
+
+
+
+  
+  {
+    "name": "Istanbul Heritage Tours",
+    "logo": "",
+    "website": "https://istanbulheritagetours.com",
+    "email": "info@istanbulheritagetours.com",
+    "phone": "+90 212 123 4567",
+    "location": { "city": "Istanbul", "country": "Turkey" },
+    "services": ["Hagia Sophia Tours", "Blue Mosque Visits", "Bosporus Cruises", "Hotel Booking"],
+    "certifications": [],
+    "rating": 4.7,
+    "reviewsCount": 1400,
+    "description": "Historical Istanbul cultural experiences.",
+    "stats": { "totalBookings": 0, "countriesCovered": 0, "yearsInBusiness": 0, "customerSatisfaction": 0 },
+    "reviews": [
+      { "name": "User 1", "comment": "Bosporus cruise was magical", "rating": 5, "date": "2024-12" }
+    ],
+    "isActive": true
+  },
+  {
+    "name": "Istanbul Explorer Agency",
+    "logo": "",
+    "website": "https://istanbulexplorer.com",
+    "email": "info@istanbulexplorer.com",
+    "phone": "+90 212 998 7766",
+    "location": { "city": "Istanbul", "country": "Turkey" },
+    "services": ["Grand Bazaar Tours", "Food Tours", "City Sightseeing", "Transport Services"],
+    "certifications": [],
+    "rating": 4.6,
+    "reviewsCount": 1100,
+    "description": "Modern and cultural Istanbul exploration tours.",
+    "stats": { "totalBookings": 0, "countriesCovered": 0, "yearsInBusiness": 0, "customerSatisfaction": 0 },
+    "reviews": [
+      { "name": "User 1", "comment": "Food tour was excellent", "rating": 5, "date": "2024-11" }
+    ],
+    "isActive": true
+  },
+  {
+    "name": "Ottoman Elite Travel",
+    "logo": "",
+    "website": "https://ottomanelitetravel.com",
+    "email": "info@ottomanelitetravel.com",
+    "phone": "+90 212 445 8899",
+    "location": { "city": "Istanbul", "country": "Turkey" },
+    "services": ["Luxury Tours", "Private Guides", "Cultural Experiences", "Hotel Booking"],
+    "certifications": [],
+    "rating": 4.8,
+    "reviewsCount": 680,
+    "description": "Luxury Ottoman-inspired travel experiences.",
+    "stats": { "totalBookings": 0, "countriesCovered": 0, "yearsInBusiness": 0, "customerSatisfaction": 0 },
+    "reviews": [
+      { "name": "User 1", "comment": "Very premium experience", "rating": 5, "date": "2024-12" }
+    ],
+    "isActive": true
+  }
+
+]
