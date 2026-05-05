@@ -7,9 +7,7 @@ const connectDB = require('./src/config/db');
 
 dotenv.config();
 
-// Connect to DB (don't crash if it fails on serverless)
-let dbConnected = false;
-connectDB().then(() => { dbConnected = true; }).catch(err => console.error('DB connection error:', err.message));
+// We will connect to the DB inside a middleware to ensure serverless compatibility
 
 const app = express();
 
@@ -21,6 +19,17 @@ app.set('trust proxy', 1);
 
 // يحمي الـ HTTP headers
 app.use(helmet());
+
+// Ensure DB is connected before handling any API requests
+app.use(async (req, res, next) => {
+  try {
+    await connectDB();
+    next();
+  } catch (error) {
+    console.error('Database connection failed:', error.message);
+    res.status(500).json({ message: 'Database connection failed' });
+  }
+});
 
 
 // Rate Limiting — 1000 request كل 15 دقيقة (تم رفع الحد عشان ميقفلش وقت التيست)
@@ -107,3 +116,50 @@ if (process.env.VERCEL !== '1') {
 
 // Export for Vercel serverless
 module.exports = app;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// https://sufar-rho.vercel.app/api/auth/forgot-password
+
+   //nodemon server.js 
+  // npm run dev
+  // npm install cloudinary
+  // node test.js
+  //npm install cloudinary mongoose dotenv fs-extra path
+  //npm install axios
+  //  npm run seed
+  //  git add .
+  // git commit -m "update"
+//  git add . && git commit -m "update" && git push
+
+  // https://sufar-rho.vercel.app/
+
+  //GET /api/hotels?city=cairo
+//GET /api/hotels/:slug
