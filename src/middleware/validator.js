@@ -2,10 +2,9 @@ const { check } = require('express-validator');
 
 const validateFullName = [
   check('fullName')
-    .notEmpty().withMessage('FullName is required')
-    
-    .isLength({ min: 3, max: 15 }).withMessage('FullName must be between 3 and 15 characters')
     .trim()
+    .notEmpty().withMessage('FullName is required')
+    .isLength({ min: 3, max: 15 }).withMessage('FullName must be between 3 and 15 characters')
     .customSanitizer(value => {
       if (typeof value !== 'string' || value.length === 0) return value;
       return value.charAt(0).toUpperCase() + value.slice(1);

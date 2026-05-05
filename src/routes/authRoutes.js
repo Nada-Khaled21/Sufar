@@ -6,6 +6,7 @@ const {
   forgotPassword, resetPassword, adminLogin
 } = require('../controllers/authController');
 const {
+  validateFullName,
   validateEmail,
   validatePassword
 } = require('../middleware/validator');
@@ -19,7 +20,7 @@ const validate = (req, res, next) => {
 };
 
 router.post('/register',
-  [...validateEmail, ...validatePassword],
+  [...validateFullName, ...validateEmail, ...validatePassword],
   validate,
   register
 );

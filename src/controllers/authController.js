@@ -6,9 +6,7 @@ const sendEmail = require('../utils/sendEmail');
 // توليد كود عشوائي
 const generateCode = () => Math.floor(100000 + Math.random() * 900000).toString();
 
-// =====================
 // Register
-// =====================
 exports.register = async (req, res) => {
   try {
     const { fullName, email, password } = req.body;
@@ -43,9 +41,7 @@ exports.register = async (req, res) => {
   }
 };
 
-// =====================
 // Verify Code
-// =====================
 exports.verifyCode = async (req, res) => {
   try {
     const { email, code } = req.body;
