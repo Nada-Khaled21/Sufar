@@ -3,7 +3,7 @@ const router = express.Router();
 const { validationResult } = require('express-validator');
 const {
   register, verifyCode, login,
-  forgotPassword, resetPassword, adminLogin
+  forgotPassword, resetPassword, adminLogin, Logout
 } = require('../controllers/authController');
 const {
   validateFullName,
@@ -35,6 +35,8 @@ router.post('/login',
 router.post('/forgot-password', validateEmail, validate, forgotPassword);
 
 router.post('/reset-password', resetPassword);
+
+router.post('/logout', Logout);
 
 
 router.get('/', (req, res) => {

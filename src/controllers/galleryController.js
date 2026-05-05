@@ -1,8 +1,6 @@
 const Gallery = require('../models/Gallery');
 
-// =====================
 // Add Image to Gallery
-// =====================
 exports.addGalleryImage = async (req, res) => {
   try {
     const { destinationId, imageUrl, caption } = req.body;

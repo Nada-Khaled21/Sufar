@@ -246,7 +246,7 @@ exports.resetPassword = async (req, res) => {
 // =====================
 // Log Out
 // =====================
-const Logout = async (req, res) => {
+exports.Logout = async (req, res) => {
   try {
     res.clearCookie("refreshToken", {
       httpOnly: true,
