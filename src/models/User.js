@@ -9,7 +9,7 @@ const userSchema = new mongoose.Schema({
   username: {
     type: String,
     unique: true,
-    sparse: true,   // sparse عشان الـ users العاديين ممكن ميكونش عندهم username
+    sparse: true, 
     trim: true
   },
   email: {

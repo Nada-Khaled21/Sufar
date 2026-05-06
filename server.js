@@ -7,15 +7,12 @@ const connectDB = require('./src/config/db');
 
 dotenv.config();
 
-// We will connect to the DB inside a middleware to ensure serverless compatibility
 
 const app = express();
 
 app.set('trust proxy', 1);
 
-// =====================
 // Security Middleware
-// =====================
 
 // يحمي الـ HTTP headers
 app.use(helmet());
@@ -32,7 +29,6 @@ app.use(async (req, res, next) => {
 });
 
 
-// Rate Limiting — 1000 request كل 15 دقيقة (تم رفع الحد عشان ميقفلش وقت التيست)
 const limiter = rateLimit({
   windowMs: 15 * 60 * 1000,
   max: 1000,

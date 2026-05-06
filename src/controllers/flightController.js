@@ -1,8 +1,6 @@
 const Flight = require('../models/Flight');
 
-/* =========================
-   SEARCH FLIGHTS
-========================= */
+  //  SEARCH FLIGHTS
 exports.searchFlights = async (req, res) => {
   try {
 
@@ -135,9 +133,7 @@ exports.getSeats = async (req, res) => {
   }
 };
 
-/* =========================
-   ADMIN CRUD (unchanged logic)
-========================= */
+  //  ADMIN CRUD
 exports.createFlight = async (req, res) => {
   try {
     const flight = await Flight.create(req.body);

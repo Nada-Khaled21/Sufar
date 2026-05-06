@@ -32,6 +32,7 @@
 
   {
     "name": "Alexandria",
+    "name_ar": "الإسكندرية",
     "country": "Egypt",
     "region": "Mediterranean Coast",
     "description": "The bride of the Mediterranean with rich history and sea views.",
@@ -62,6 +63,7 @@
 
   {
     "name": "Hurghada",
+    "name_ar": "الغردقة",
     "country": "Egypt",
     "region": "Red Sea",
     "description": "A paradise for diving and water activities.",
@@ -92,6 +94,7 @@
 
   {
     "name": "Sharm El Sheikh",
+    "name_ar": "شرم الشيخ",
     "country": "Egypt",
     "region": "Sinai",
     "description": "Famous for diving spots and desert adventures.",
@@ -122,6 +125,7 @@
 
   {
     "name": "Luxor",
+    "name_ar": "الأقصر",
     "country": "Egypt",
     "region": "Upper Egypt",
     "description": "The world’s greatest open-air museum.",
@@ -152,6 +156,7 @@
 
   {
     "name": "Aswan",
+    "name_ar": "أسوان",
     "country": "Egypt",
     "region": "Upper Egypt",
     "description": "A peaceful Nile city with Nubian culture.",
@@ -182,6 +187,7 @@
 
   {
     "name": "Riyadh",
+    "name_ar": "الرياض",
     "country": "Saudi Arabia",
     "region": "Middle East",
     "description": "The modern capital of Saudi Arabia blending tradition and innovation.",
@@ -196,6 +202,7 @@
 
   {
     "name": "Jeddah",
+    "name_ar": "جدة",
     "country": "Saudi Arabia",
     "region": "Red Sea",
     "description": "A vibrant coastal city with rich history and modern lifestyle.",
@@ -210,6 +217,7 @@
 
   {
     "name": "Makkah",
+    "name_ar": "مكة",
     "country": "Saudi Arabia",
     "region": "Middle East",
     "description": "The holiest city in Islam.",
@@ -224,6 +232,7 @@
 
   {
     "name": "Al Madinah",
+    "name_ar": "المدينة",
     "country": "Saudi Arabia",
     "region": "Middle East",
     "description": "The city of the Prophet Muhammad ﷺ.",
@@ -238,6 +247,7 @@
 
   {
     "name": "Dubai",
+    "name_ar": "دبي",
     "country": "UAE",
     "region": "Middle East",
     "description": "A futuristic city known for luxury and innovation.",
@@ -252,6 +262,7 @@
 
   {
     "name": "Abu Dhabi",
+    "name_ar": "أبو ظبي",
     "country": "UAE",
     "region": "Middle East",
     "description": "The cultural and political capital of UAE.",
@@ -266,6 +277,7 @@
 
   {
     "name": "Doha",
+    "name_ar": "الدوحة",
     "country": "Qatar",
     "region": "Middle East",
     "description": "Modern city with rich culture and heritage.",
@@ -280,6 +292,7 @@
 
   {
     "name": "Amman",
+    "name_ar": "عمان",
     "country": "Jordan",
     "region": "Middle East",
     "description": "Ancient city blending history and modern life.",
@@ -294,6 +307,7 @@
 
   {
     "name": "Beirut",
+    "name_ar": "بيروت",
     "country": "Lebanon",
     "region": "Middle East",
     "description": "A vibrant Mediterranean city full of life.",
@@ -308,6 +322,7 @@
 
   {
     "name": "Paris",
+    "name_ar": "باريس",
     "country": "France",
     "region": "Europe",
     "description": "The city of love and lights.",
@@ -322,6 +337,7 @@
 
   {
     "name": "Rome",
+    "name_ar": "روما",
     "country": "Italy",
     "region": "Europe",
     "description": "The eternal city of ancient history.",
@@ -336,6 +352,7 @@
 
   {
     "name": "Barcelona",
+    "name_ar": "برشلونة",
     "country": "Spain",
     "region": "Europe",
     "description": "City of art, architecture, and beaches.",
@@ -350,6 +367,7 @@
 
   {
     "name": "London",
+    "name_ar": "لندن",
     "country": "UK",
     "region": "Europe",
     "description": "Historic and modern global capital.",
@@ -364,6 +382,7 @@
 
   {
     "name": "New York",
+    "name_ar": "نيو يورك",
     "country": "USA",
     "region": "North America",
     "description": "The city that never sleeps.",
@@ -378,6 +397,7 @@
 
   {
     "name": "Los Angeles",
+    "name_ar": "لوس أنجيلوس",
     "country": "USA",
     "region": "North America",
     "description": "Entertainment capital of the world.",
@@ -392,6 +412,7 @@
 
   {
     "name": "Istanbul",
+    "name_ar": "اسطنبول",
     "country": "Turkey",
     "region": "Europe/Asia",
     "description": "City between two continents.",
@@ -406,6 +427,7 @@
 
   {
     "name": "Tokyo",
+    "name_ar": "طوكيو",
     "country": "Japan",
     "region": "Asia",
     "description": "Futuristic city with deep tradition.",
@@ -420,6 +442,7 @@
 
   {
     "name": "Maldives",
+    "name_ar": "مالديفز",
     "country": "Maldives",
     "region": "Indian Ocean",
     "description": "Luxury island paradise.",
