@@ -1,9 +1,7 @@
 const Review = require('../models/Review');
 const Hotel = require('../models/Hotel');
 
-// =====================
 // Create a Review
-// =====================
 exports.createReview = async (req, res) => {
   try {
     const { hotelId, destinationId, rating, comment, images } = req.body;

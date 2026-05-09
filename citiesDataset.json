@@ -1488,6 +1488,7 @@
   {
     "city": "Beirut",
     "city_ar": "بيروت",
+    "slug": "beirut",
     "country": "Lebanon",
     "country_ar": "لبنان",
     "region": "Middle East",
@@ -1702,8 +1703,8 @@
         ],
         "locationType": "City Center"
       }
-    ],
-    "slug": "beirut"
+    ]
+    
   },
   {
     "city": "Riyadh",
@@ -2478,257 +2479,286 @@
     ]
   },
   {
-    "city": "Dubai",
-    "city_ar": "دبي",
-    "slug": "dubai",
-    "country": "United Arab Emirates",
-    "country_ar": "الإمارات العربية المتحدة",
-    "region": "Middle East",
-    "coverImage": "dubai/cover.jpg",
-    "description": "Dubai, the city of dreams and innovation, known for its skyscrapers, luxury shopping, and being a 21st-century icon.",
-    "highlights": [
-      "Burj Khalifa",
-      "Burj Al Arab",
-      "The Palm Jumeirah",
-      "Dubai Mall"
-    ],
-    "galleryImages": [
-      "dubai/gallery/1.jpg",
-      "dubai/gallery/2.jpg",
-      "dubai/gallery/3.jpg"
-    ],
-    "hotels": [
-      {
-        "name": "Burj Al Arab Jumeirah",
-        "slug": "burj-al-arab",
-        "stars": 5,
-        "rating": 4.9,
-        "reviewsCount": 3000,
-        "description": "The world's most famous sail-shaped hotel. Features 202 duplex suites and is often described as a 7-star hotel.",
-        "location": {
-          "address": "Jumeirah Beach",
-          "city": "Dubai",
-          "country": "United Arab Emirates"
-        },
-        "startingFrom": 7500,
-        "facilities": [
-          "Underwater Restaurant",
-          "Rooftop Helipad",
-          "9 Restaurants",
-          "Butler Service",
-          "Private Beach"
-        ],
-        "images": [
-          "dubai/burj-al-arab/1.jpg",
-          "dubai/burj-al-arab/2.jpg"
-        ],
-        "roomTypes": [
-          {
-            "name": "Deluxe Single Suite",
-            "type": "Suite",
-            "capacity": 1,
-            "pricePerNight": 7500
-          },
-          {
-            "name": "Double Duplex Suite",
-            "type": "Suite",
-            "capacity": 4,
-            "pricePerNight": 11000
-          },
-          {
-            "name": "Royal Suite",
-            "type": "Suite",
-            "capacity": 6,
-            "pricePerNight": 65000
-          }
-        ],
-        "locationType": "City Center"
+  "city": "Dubai",
+  "city_ar": "دبي",
+  "slug": "dubai",
+  "country": "UAE",
+  "country_ar": "الإمارات العربية المتحدة",
+  "region": "Middle East",
+  "description": "Explore Dubai, a world-class city known for luxury hotels, modern architecture, shopping destinations, and vibrant urban experiences.",
+  "hotels": [
+    {
+      "name": "Palace Dubai Creek Harbour",
+      "slug": "palace-dubai-creek-harbour",
+      "stars": 5,
+      "rating": 9.2,
+      "reviewsCount": null,
+      "description": "Elegant 5-star hotel offering luxury spa, wellness center, pool, and stunning Creek Harbour views with premium hospitality.",
+      "location": {
+        "address": "Dubai Creek Harbour",
+        "city": "Dubai",
+        "country": "UAE"
       },
-      {
-        "name": "Atlantis The Palm",
-        "slug": "atlantis-the-palm",
-        "stars": 5,
-        "rating": 4.7,
-        "reviewsCount": 5000,
-        "description": "An integrated entertainment destination on Palm Jumeirah, home to the largest water park in the Middle East and a giant aquarium.",
-        "location": {
-          "address": "Palm Jumeirah",
-          "city": "Dubai",
-          "country": "United Arab Emirates"
+      "startingFrom": 481,
+      "currency": "AED",
+      "facilities": [
+        "Spa",
+        "Sauna",
+        "Fitness Center",
+        "Outdoor Pool",
+        "Free WiFi",
+        "Restaurant",
+        "Nile-style Canal View"
+      ],
+      "roomTypes": [
+        {
+          "name": "Deluxe Room King",
+          "type": "Double",
+          "capacity": 3,
+          "pricePerNight": 481,
+          "size": "45 sqm",
+          "features": "Balcony, City View, Nespresso machine, Smart TV, Work desk"
         },
-        "startingFrom": 1900,
-        "facilities": [
-          "Aquaventure Waterpark",
-          "Lost Chambers Aquarium",
-          "21 Restaurants",
-          "Private Beach",
-          "Global Spa"
-        ],
-        "images": [
-          "dubai/atlantis/1.jpg",
-          "dubai/atlantis/2.jpg"
-        ],
-        "roomTypes": [
-          {
-            "name": "Single Room",
-            "type": "Single",
-            "capacity": 1,
-            "pricePerNight": 1900
-          },
-          {
-            "name": "Double Room",
-            "type": "Double",
-            "capacity": 2,
-            "pricePerNight": 2700
-          },
-          {
-            "name": "Underwater Suite",
-            "type": "Suite",
-            "capacity": 4,
-            "pricePerNight": 12000
-          }
-        ],
-        "locationType": "City Center"
+        {
+          "name": "Deluxe Room Twin",
+          "type": "Twin",
+          "capacity": 3,
+          "pricePerNight": 481,
+          "size": "45 sqm",
+          "features": "Balcony, City View, Modern interiors, Smart TV"
+        },
+        {
+          "name": "Deluxe Canal View Room Twin",
+          "type": "Twin",
+          "capacity": 3,
+          "pricePerNight": 578,
+          "size": "45 sqm",
+          "features": "Canal View, Sunset view, Balcony, Luxury furnishings"
+        },
+        {
+          "name": "Executive Suite",
+          "type": "Suite",
+          "capacity": 4,
+          "pricePerNight": 1072,
+          "size": "111 sqm",
+          "features": "Canal View, Separate living room, Dining area, Balcony"
+        },
+        {
+          "name": "Presidential Suite",
+          "type": "Suite",
+          "capacity": 4,
+          "pricePerNight": 1397,
+          "size": "203 sqm",
+          "features": "Canal view, Luxury bathtub, Large terrace, Kitchenette"
+        }
+      ],
+      "locationType": "Canal View"
+    },
+    {
+      "name": "The Canvas Dubai - MGallery Hotel Collection",
+      "slug": "canvas-dubai-mgallery",
+      "stars": 5,
+      "rating": 7.9,
+      "reviewsCount": null,
+      "description": "Modern luxury hotel in historic Bur Dubai near Dubai Creek and Gold Souk with spa and rooftop pool.",
+      "location": {
+        "address": "Bur Dubai",
+        "city": "Dubai",
+        "country": "UAE"
       },
-      {
-        "name": "Marriott Harbour City",
-        "slug": "marriott-harbour-city",
-        "stars": 4,
-        "rating": 4.3,
-        "reviewsCount": 1100,
-        "description": "First-class business hotel in Dubai Internet City with premium commercial and leisure facilities.",
-        "location": {
-          "address": "Dubai Internet City",
-          "city": "Dubai",
-          "country": "United Arab Emirates"
+      "startingFrom": 96.41,
+      "currency": "GBP",
+      "facilities": [
+        "Rooftop Pool",
+        "Spa",
+        "Free WiFi",
+        "Restaurants",
+        "Cigar Lounge",
+        "Bar"
+      ],
+      "roomTypes": [
+        {
+          "name": "Superior Double Room",
+          "type": "Double",
+          "capacity": 2,
+          "pricePerNight": 136,
+          "features": "48 sqm, Air conditioning, Private bathroom"
         },
-        "startingFrom": 700,
-        "facilities": [
-          "Conference Center",
-          "Infinity Pool",
-          "2 International Restaurants",
-          "Free WiFi",
-          "Gym"
-        ],
-        "images": [
-          "dubai/marriott-harbour/1.jpg",
-          "dubai/marriott-harbour/2.jpg"
-        ],
-        "roomTypes": [
-          {
-            "name": "Single Room",
-            "type": "Single",
-            "capacity": 1,
-            "pricePerNight": 700
-          },
-          {
-            "name": "Double Room",
-            "type": "Double",
-            "capacity": 2,
-            "pricePerNight": 950
-          },
-          {
-            "name": "Executive Suite",
-            "type": "Suite",
-            "capacity": 3,
-            "pricePerNight": 2200
-          }
-        ],
-        "locationType": "City Center"
+        {
+          "name": "Superior Room Twin",
+          "type": "Twin",
+          "capacity": 2,
+          "pricePerNight": 130,
+          "features": "Air conditioning, Minibar, Desk"
+        },
+        {
+          "name": "Executive Double Room",
+          "type": "Double",
+          "capacity": 3,
+          "pricePerNight": 96.41,
+          "features": "King bed, Air conditioning, Private bathroom"
+        },
+        {
+          "name": "Junior Suite",
+          "type": "Suite",
+          "capacity": 3,
+          "pricePerNight": 122.97,
+          "features": "Spacious suite, Luxury bathroom, Bath amenities"
+        },
+        {
+          "name": "Double Junior Suite",
+          "type": "Suite",
+          "capacity": 4,
+          "pricePerNight": 126.41,
+          "features": "Bathtub, Bathrobes, Alarm clock, Private bathroom"
+        }
+      ],
+      "locationType": "Historic Area"
+    },
+    {
+      "name": "TRYP by Wyndham Dubai",
+      "slug": "tryp-by-wyndham-dubai",
+      "stars": 4,
+      "rating": 8.7,
+      "reviewsCount": null,
+      "description": "Modern urban hotel in Barsha Heights offering stylish rooms, suites, and beach club access.",
+      "location": {
+        "address": "Barsha Heights",
+        "city": "Dubai",
+        "country": "UAE"
       },
-      {
-        "name": "Ibis Styles Dubai Jumeirah",
-        "slug": "ibis-styles-jumeirah",
-        "stars": 3,
-        "rating": 4,
-        "reviewsCount": 800,
-        "description": "Modern hotel with a vibrant design, suitable for young travelers and families on a budget.",
-        "location": {
-          "address": "Jumeirah District",
-          "city": "Dubai",
-          "country": "United Arab Emirates"
+      "startingFrom": 265,
+      "currency": "AED",
+      "facilities": [
+        "Restaurants",
+        "Bars",
+        "Fitness Center",
+        "Beach Access (Paid)",
+        "Free WiFi"
+      ],
+      "roomTypes": [
+        {
+          "name": "TRYP Room",
+          "type": "Double",
+          "capacity": 2,
+          "pricePerNight": 265,
+          "size": "236 sq ft",
+          "features": "Balcony (select rooms), Streaming, Work area"
         },
-        "startingFrom": 280,
-        "facilities": [
-          "Rooftop Pool",
-          "Free Breakfast",
-          "Free WiFi",
-          "Restaurant",
-          "Gym"
-        ],
-        "images": [
-          "dubai/ibis-styles/1.jpg",
-          "dubai/ibis-styles/2.jpg"
-        ],
-        "roomTypes": [
-          {
-            "name": "Single Room",
-            "type": "Single",
-            "capacity": 1,
-            "pricePerNight": 280
-          },
-          {
-            "name": "Double Room",
-            "type": "Double",
-            "capacity": 2,
-            "pricePerNight": 380
-          },
-          {
-            "name": "Superior Room",
-            "type": "Double",
-            "capacity": 2,
-            "pricePerNight": 500
-          }
-        ],
-        "locationType": "City Center"
+        {
+          "name": "One Bedroom Suite",
+          "type": "Suite",
+          "capacity": 4,
+          "pricePerNight": 283.25,
+          "size": "441 sq ft",
+          "features": "Living room, Sofa bed, 2 bathrooms"
+        },
+        {
+          "name": "Premium Suite",
+          "type": "Suite",
+          "capacity": 3,
+          "pricePerNight": 283.25,
+          "size": "430 sq ft",
+          "features": "Spacious balcony, King bed, Loft-style design"
+        },
+        {
+          "name": "Triple Room",
+          "type": "Triple",
+          "capacity": 3,
+          "pricePerNight": 415,
+          "size": "236 sq ft",
+          "features": "Queen bed + extra bed, Work area"
+        },
+        {
+          "name": "Accessible Room",
+          "type": "Single",
+          "capacity": 1,
+          "pricePerNight": 265,
+          "features": "Accessible bathroom, Mini bar, Safe"
+        }
+      ],
+      "locationType": "City Center"
+    },
+    {
+      "name": "City Seasons Towers Hotel Bur Dubai",
+      "slug": "city-seasons-towers-bur-dubai",
+      "stars": 4,
+      "rating": 8.1,
+      "reviewsCount": null,
+      "description": "Modern hotel near Burjuman Mall with easy access to metro, Dubai Mall, and airport.",
+      "location": {
+        "address": "Bur Dubai",
+        "city": "Dubai",
+        "country": "UAE"
       },
-      {
-        "name": "Eurostars Prima Dubai",
-        "slug": "eurostars-prima-dubai",
-        "stars": 2,
-        "rating": 3.5,
-        "reviewsCount": 400,
-        "description": "Clean budget hotel suitable for short stays or business travelers with limited budgets.",
-        "location": {
-          "address": "Al Qusais",
-          "city": "Dubai",
-          "country": "United Arab Emirates"
+      "startingFrom": 135,
+      "currency": "AED",
+      "facilities": [
+        "Pool",
+        "Sauna",
+        "Free WiFi",
+        "24h Reception",
+        "Restaurant"
+      ],
+      "roomTypes": [
+        {
+          "name": "Premium Room",
+          "type": "Double",
+          "capacity": 2,
+          "pricePerNight": 135,
+          "features": "City view, Bathtub, Mini bar"
         },
-        "startingFrom": 120,
-        "facilities": [
-          "Breakfast Room",
-          "Laundry Service",
-          "Free WiFi in Lobby",
-          "Air Conditioning"
-        ],
-        "images": [
-          "dubai/eurostars-prima/1.jpg",
-          "dubai/eurostars-prima/2.jpg"
-        ],
-        "roomTypes": [
-          {
-            "name": "Single Room",
-            "type": "Single",
-            "capacity": 1,
-            "pricePerNight": 120
-          },
-          {
-            "name": "Double Room",
-            "type": "Double",
-            "capacity": 2,
-            "pricePerNight": 180
-          },
-          {
-            "name": "Deluxe Room",
-            "type": "Double",
-            "capacity": 2,
-            "pricePerNight": 250
-          }
-        ],
-        "locationType": "City Center"
-      }
-    ]
-  },
+        {
+          "name": "Deluxe Room",
+          "type": "Double",
+          "capacity": 2,
+          "pricePerNight": 180,
+          "features": "Connecting rooms, LED TV, City view"
+        },
+        {
+          "name": "Seasons Suite",
+          "type": "Suite",
+          "capacity": 3,
+          "pricePerNight": 314.1,
+          "features": "Living room, Sofa set, Extra bed option"
+        }
+      ],
+      "locationType": "City Center"
+    },
+    {
+      "name": "Holiday Inn Express Dubai Safa Park",
+      "slug": "holiday-inn-express-safa-park",
+      "stars": 3,
+      "rating": 8.2,
+      "reviewsCount": null,
+      "description": "Affordable hotel on Sheikh Zayed Road near Safa Park with shuttle access to major attractions.",
+      "location": {
+        "address": "Sheikh Zayed Road",
+        "city": "Dubai",
+        "country": "UAE"
+      },
+      "startingFrom": 2483,
+      "currency": "EGP",
+      "facilities": [
+        "Free Shuttle",
+        "Fitness Center",
+        "Restaurant",
+        "Free WiFi",
+        "24h Store"
+      ],
+      "roomTypes": [
+        {
+          "name": "Standard Room",
+          "type": "Double",
+          "capacity": 2,
+          "pricePerNight": 2483,
+          "features": "Burj Khalifa view (some rooms), Sofa bed option"
+        }
+      ],
+      "locationType": "City Center"
+    }
+  ]
+},
   {
     "city": "Doha",
     "city_ar": "الدوحة",
@@ -5540,5 +5570,245 @@
         "locationType": "City Center"
       }
     ]
-  }
+  },
+
+  {
+  "city": "Luxor",
+  "city_ar": "الأقصر",
+  "slug": "luxor",
+  "country": "Egypt",
+  "country_ar": "مصر",
+  "region": "Upper Egypt",
+  "description": "Explore Luxor, one of the world's greatest open-air museums, home to ancient temples, the Nile views, and rich Pharaonic history.",
+  "hotels": [
+    {
+      "name": "Luxor Nile View Hotel (Name Not Provided)",
+      "slug": "luxor-nile-view-hotel",
+      "stars": 5,
+      "rating": null,
+      "reviewsCount": null,
+      "description": "Hotel offering premium Nile view rooms with a mix of luxury and comfort.",
+      "location": {
+        "address": "Luxor",
+        "city": "Luxor",
+        "country": "Egypt"
+      },
+      "startingFrom": 7000,
+      "facilities": [
+        "Nile View",
+        "Balcony",
+        "Luxury Rooms",
+        "Room Service"
+      ],
+      "images": [],
+      "roomTypes": [
+        {
+          "name": "Partial Nile View Room",
+          "type": "Double",
+          "capacity": 2,
+          "priceRange": "7000 - 9500 EGP",
+          "features": "Beautiful Nile view from balcony, larger than classic room, modern amenities, comfortable bed"
+        },
+        {
+          "name": "Executive Room Front Nile View",
+          "type": "Double",
+          "capacity": 2,
+          "priceRange": "8500 - 12000 EGP",
+          "features": "Direct panoramic Nile view, large balcony, view of Luxor Temple, hot air balloons view"
+        },
+        {
+          "name": "Family Room",
+          "type": "Family",
+          "capacity": 4,
+          "priceRange": "8000 - 11000 EGP",
+          "features": "Two connecting rooms or large room, large bed + two kids beds, privacy for parents"
+        },
+        {
+          "name": "Presidential Suite",
+          "type": "Suite",
+          "capacity": 4,
+          "priceRange": "20000 - 30000 EGP",
+          "features": "Over 100 sqm, multiple rooms, luxury decor, private terrace, jacuzzi, Nile view"
+        }
+      ],
+      "locationType": "Nile View"
+    },
+    {
+      "name": "Jolie Ville Hotel & Spa Kings Island",
+      "slug": "jolie-ville-kings-island",
+      "stars": 5,
+      "rating": null,
+      "reviewsCount": null,
+      "description": "Private island hotel in the Nile offering total privacy, greenery, and relaxation atmosphere.",
+      "location": {
+        "address": "Kings Island - West Bank",
+        "city": "Luxor",
+        "country": "Egypt"
+      },
+      "startingFrom": 4000,
+      "facilities": [
+        "Private Island",
+        "Nile View",
+        "Spa",
+        "Green Areas",
+        "Quiet Environment"
+      ],
+      "roomTypes": [
+        {
+          "name": "Standard Garden View Room",
+          "type": "Double",
+          "capacity": 2,
+          "priceRange": "4000 - 6000 EGP",
+          "features": "Garden view, simple decor, 24 sqm, very quiet"
+        },
+        {
+          "name": "Deluxe Garden View Room",
+          "type": "Double",
+          "capacity": 2,
+          "priceRange": "5500 - 8000 EGP",
+          "features": "43 sqm, modern decor, sitting area, large bathroom"
+        },
+        {
+          "name": "Deluxe Nile View Room",
+          "type": "Double",
+          "capacity": 2,
+          "priceRange": "7000 - 10000 EGP",
+          "features": "Nile view, 43 sqm, balcony, high privacy"
+        },
+        {
+          "name": "Junior Suite",
+          "type": "Suite",
+          "capacity": 2,
+          "priceRange": "8500 - 12000 EGP",
+          "features": "60 sqm, living + bedroom, terrace, romantic setup"
+        },
+        {
+          "name": "Executive Suite",
+          "type": "Suite",
+          "capacity": 3,
+          "priceRange": "12000 - 17000 EGP",
+          "features": "Large luxury suite, multiple rooms, spa bathroom, best views"
+        }
+      ],
+      "locationType": "Island"
+    },
+    {
+      "name": "Hilton Luxor Resort & Spa",
+      "slug": "hilton-luxor-resort-spa",
+      "stars": 5,
+      "rating": null,
+      "reviewsCount": null,
+      "description": "Luxury modern resort on the Nile Corniche with spa and infinity pools.",
+      "location": {
+        "address": "East Bank",
+        "city": "Luxor",
+        "country": "Egypt"
+      },
+      "startingFrom": 6000,
+      "facilities": [
+        "Infinity Pool",
+        "Spa",
+        "Nile View",
+        "Private Beach",
+        "Luxury Dining"
+      ],
+      "roomTypes": [
+        {
+          "name": "Classic Room",
+          "type": "Double",
+          "capacity": 2,
+          "priceRange": "6000 - 8500 EGP",
+          "features": "Modern design, garden/pool view, balcony"
+        },
+        {
+          "name": "Nile View Room",
+          "type": "Double",
+          "capacity": 2,
+          "priceRange": "8000 - 11000 EGP",
+          "features": "Direct Nile view, sunset view, elegant decor"
+        },
+        {
+          "name": "Deluxe Nile View Room",
+          "type": "Double",
+          "capacity": 2,
+          "priceRange": "10000 - 14000 EGP",
+          "features": "45 sqm, panoramic Nile view, luxury bathroom"
+        },
+        {
+          "name": "Junior Suite",
+          "type": "Suite",
+          "capacity": 2,
+          "priceRange": "14000 - 19000 EGP",
+          "features": "70 sqm, separate living room, Nile terrace"
+        },
+        {
+          "name": "Presidential Suite",
+          "type": "Suite",
+          "capacity": 4,
+          "priceRange": "30000 - 45000 EGP",
+          "features": "120+ sqm, 360° Nile view, ultra luxury"
+        }
+      ],
+      "locationType": "Riverfront"
+    },
+    {
+      "name": "Mercure Luxor Karnak",
+      "slug": "mercure-luxor-karnak",
+      "stars": 4,
+      "rating": null,
+      "reviewsCount": null,
+      "description": "Affordable hotel near Karnak Temple with good Nile views and peaceful atmosphere.",
+      "location": {
+        "address": "Near Karnak Temple",
+        "city": "Luxor",
+        "country": "Egypt"
+      },
+      "startingFrom": 3000,
+      "facilities": [
+        "Near Temples",
+        "Nile View",
+        "Budget Friendly",
+        "Family Rooms"
+      ],
+      "roomTypes": [
+        {
+          "name": "Standard Room",
+          "type": "Double",
+          "capacity": 2,
+          "priceRange": "3000 - 4500 EGP",
+          "features": "Simple design, city/garden view, AC"
+        },
+        {
+          "name": "Nile View Room",
+          "type": "Double",
+          "capacity": 2,
+          "priceRange": "4500 - 6500 EGP",
+          "features": "Nile view balcony, better space, simple elegance"
+        },
+        {
+          "name": "Karnak View Room",
+          "type": "Double",
+          "capacity": 2,
+          "priceRange": "5000 - 7500 EGP",
+          "features": "View of Karnak Temple, Sound & Light show view"
+        },
+        {
+          "name": "Family Room",
+          "type": "Family",
+          "capacity": 4,
+          "priceRange": "6500 - 9000 EGP",
+          "features": "Large space, connecting rooms, garden/Nile view"
+        },
+        {
+          "name": "Junior Suite",
+          "type": "Suite",
+          "capacity": 2,
+          "priceRange": "8000 - 11000 EGP",
+          "features": "50 sqm, living + bedroom, terrace"
+        }
+      ],
+      "locationType": "City Center"
+    }
+  ]
+}
 ]

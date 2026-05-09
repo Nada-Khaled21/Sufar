@@ -23,7 +23,7 @@ exports.createHotelBooking = async (req, res) => {
       return res.status(400).json({ message: 'Check-out must be after check-in' });
     }
 
-    // ✅ Conflict Check — هل الغرفة محجوزة في التواريخ دي؟
+    //  Conflict Check — هل الغرفة محجوزة في التواريخ دي؟
     // بنشوف في الـ Bookings مش في الـ Room نفسها
     const conflict = await Booking.findOne({
       room: roomId,

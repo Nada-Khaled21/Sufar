@@ -32,16 +32,57 @@ const generateSlug = (name) =>
 const getPexelsImage = async (query) => {
   try {
     if (!process.env.PEXELS_API_KEY) return null;
-
     const res = await axios.get(
       `https://api.pexels.com/v1/search?query=${encodeURIComponent(query)}&per_page=1`,
       { headers: { Authorization: process.env.PEXELS_API_KEY } }
     );
-
     return res.data.photos[0]?.src?.medium || null;
   } catch {
     return null;
   }
+};
+
+// رفع صورة واحدة على Cloudinary
+const uploadImage = async (localPath, cloudinaryFolder) => {
+  try {
+    const result = await cloudinary.uploader.upload(localPath, {
+      folder: cloudinaryFolder,
+      use_filename: true,
+      unique_filename: false,
+      overwrite: true,
+    });
+    return result.secure_url;
+  } catch (err) {
+    console.error(`   Upload failed: ${path.basename(localPath)}: ${err.message}`);
+    return null;
+  }
+};
+
+// جلب صورة الـ destination من فولدر Images/destinations/:slug
+const getDestinationImage = async (slug) => {
+  const extensions = ['jpg', 'jpeg', 'png', 'webp'];
+  const baseDir = path.join(__dirname, "Images", "destinations", slug);
+
+  // نشوف لو في فولدر باسم الـ slug
+  if (fs.existsSync(baseDir)) {
+    const files = fs.readdirSync(baseDir).filter(f => /\.(jpg|jpeg|png|webp)$/i.test(f));
+    if (files.length > 0) {
+      const localPath = path.join(baseDir, files[0]);
+      const url = await uploadImage(localPath, `sufar/destinations`);
+      if (url) return url;
+    }
+  }
+
+  // نشوف لو في صورة مباشرة باسم الـ slug
+  for (const ext of extensions) {
+    const localPath = path.join(__dirname, "Images", "destinations", `${slug}.${ext}`);
+    if (fs.existsSync(localPath)) {
+      const url = await uploadImage(localPath, `sufar/destinations`);
+      if (url) return url;
+    }
+  }
+
+  return null;
 };
 
 // =====================
@@ -56,6 +97,11 @@ const seedDestinations = async () => {
   for (const dest of data) {
     const slug = generateSlug(dest.name);
 
+    // صورة الـ destination من لوكال أولاً
+    const localImage = await getDestinationImage(slug);
+    // لو مفيش لوكال — مش بنستخدم Pexels للـ destination
+    const destImage = localImage || "";
+
     const destination = await Destination.findOneAndUpdate(
       { slug },
       {
@@ -66,21 +112,19 @@ const seedDestinations = async () => {
           country: dest.country,
           region: dest.region || "",
           description: dest.description || "",
-          image: await getPexelsImage(dest.name + " city"),
+          image: destImage,
         },
       },
       { upsert: true, new: true }
     );
 
+    if (localImage) console.log(`  ✅ Destination image uploaded: ${dest.name}`);
     stats.destinations.added++;
 
-    // ACTIVITIES (no duplicates)
+    // ACTIVITIES — صورهم من Pexels بس
     for (const act of dest.activities || []) {
       await Activity.findOneAndUpdate(
-        {
-          destination: destination._id,
-          title: act.title,
-        },
+        { destination: destination._id, title: act.title },
         {
           $setOnInsert: {
             destination: destination._id,
@@ -91,7 +135,6 @@ const seedDestinations = async () => {
         },
         { upsert: true }
       );
-
       stats.activities.added++;
     }
   }
@@ -109,6 +152,9 @@ const seedHotels = async () => {
   for (const city of data) {
     const citySlug = (city.slug || generateSlug(city.city)).toLowerCase();
 
+    // صورة الـ destination من لوكال
+    const localDestImage = await getDestinationImage(citySlug);
+
     const destination = await Destination.findOneAndUpdate(
       { slug: citySlug },
       {
@@ -120,6 +166,7 @@ const seedHotels = async () => {
           country_ar: city.country_ar || "",
           region: city.region || "",
           description: city.description || "",
+          image: localDestImage || "",
         },
       },
       { upsert: true, new: true }

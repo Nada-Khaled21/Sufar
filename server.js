@@ -37,7 +37,7 @@ const limiter = rateLimit({
 });
 app.use('/api', limiter);
 
-// Rate Limit أشد على الـ Auth routes
+
 const authLimiter = rateLimit({
   windowMs: 15 * 60 * 1000,
   max: 100, 
@@ -46,15 +46,11 @@ const authLimiter = rateLimit({
 });
 app.use('/api/auth', authLimiter);
 
-// =====================
 // General Middleware
-// =====================
 app.use(cors());
 app.use(express.json({ limit: '10kb' }));
 
-// =====================
 // Routes
-// =====================
 app.use('/api/auth', require('./src/routes/authRoutes'));
 app.use('/api/users', require('./src/routes/userRoutes'));
 app.use('/api/hotels', require('./src/routes/hotelRoutes'));
@@ -64,6 +60,7 @@ app.use('/api/bookings', require('./src/routes/bookingRoutes'));
 app.use('/api/reviews', require('./src/routes/reviewRoutes'));
 app.use('/api/gallery', require('./src/routes/galleryRoutes'));
 app.use('/api/travel-offices', require('./src/routes/travelOfficeRoutes'));
+app.use('/api/weather', require('./src/routes/weatherRoutes'));
 
 
 // Test Route
@@ -77,9 +74,7 @@ app.use((req, res) => {
   res.status(404).json({ message: 'Route not found' });
 });
 
-// =====================
 // Global Error Handler
-// =====================
 app.use((err, req, res, next) => {
   console.error(err.stack);
 
@@ -157,5 +152,5 @@ module.exports = app;
 
   // https://sufar-rho.vercel.app/
 
-  //GET /api/hotels?city=cairo
-//GET /api/hotels/:slug
+//  GET /api/weather?city=Cairo&slug=cairo
+// GET /api/weather?city=Dubai&slug=dubai
