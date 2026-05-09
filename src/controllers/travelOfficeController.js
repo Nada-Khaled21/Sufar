@@ -89,11 +89,14 @@ exports.updateOffice = async (req, res) => {
     // منع تعديل الـ reviews عن طريق هذا الـ endpoint
     const { reviews, rating, reviewsCount, ...updateData } = req.body;
 
-    const office = await TravelOffice.findByIdAndUpdate(
-      req.params.id,
-      updateData,
-      { new: true, runValidators: true }
-    );
+   const office = await TravelOffice.findByIdAndUpdate(
+  req.params.id,
+  updateData,
+  {
+    returnDocument: 'after',
+    runValidators: true
+  }
+);
 
     if (!office) return res.status(404).json({ message: 'Travel office not found' });
 
@@ -112,11 +115,11 @@ exports.updateOffice = async (req, res) => {
 // =====================
 exports.deleteOffice = async (req, res) => {
   try {
-    const office = await TravelOffice.findByIdAndUpdate(
-      req.params.id,
-      { isActive: false },
-      { new: true }
-    );
+  const office = await TravelOffice.findByIdAndUpdate(
+    req.params.id,
+    { isActive: false },
+    { returnDocument: 'after' }
+  );
 
     if (!office) return res.status(404).json({ message: 'Travel office not found' });
 

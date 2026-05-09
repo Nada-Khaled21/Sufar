@@ -179,9 +179,11 @@ exports.updateHotel = async (req, res) => {
     const hotel = await Hotel.findByIdAndUpdate(
       req.params.id,
       req.body,
-      { new: true, runValidators: true }
+      {
+        returnDocument: 'after',
+        runValidators: true
+      }
     );
-
     if (!hotel) {
       return res.status(404).json({ message: 'Hotel not found' });
     }

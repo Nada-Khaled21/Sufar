@@ -148,7 +148,10 @@ exports.updateFlight = async (req, res) => {
     const flight = await Flight.findByIdAndUpdate(
       req.params.id,
       req.body,
-      { new: true, runValidators: true }
+      {
+         returnDocument: 'after' ,
+         runValidators: true 
+      }
     );
 
     if (!flight) {
@@ -168,7 +171,7 @@ exports.deleteFlight = async (req, res) => {
     const flight = await Flight.findByIdAndUpdate(
       req.params.id,
       { isActive: false },
-      { new: true }
+      { returnDocument: 'after' }
     );
 
     if (!flight) {

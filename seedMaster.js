@@ -85,6 +85,38 @@ const getDestinationImage = async (slug) => {
   return null;
 };
 
+// جلب صور الفندق من فولدر Images/:citySlug/:hotelSlug/general
+const getHotelImages = async (citySlug, hotelSlug) => {
+  const baseDir = path.join(__dirname, "Images", citySlug, hotelSlug, "general");
+  let uploadedUrls = [];
+  
+  if (fs.existsSync(baseDir)) {
+    const files = fs.readdirSync(baseDir).filter(f => /\.(jpg|jpeg|png|webp)$/i.test(f));
+    for (const file of files) {
+      const localPath = path.join(baseDir, file);
+      const url = await uploadImage(localPath, `sufar/hotels/${hotelSlug}/general`);
+      if (url) uploadedUrls.push(url);
+    }
+  }
+  return uploadedUrls;
+};
+
+// جلب صور الغرف من فولدر Images/:citySlug/:hotelSlug/rooms
+const getRoomImages = async (citySlug, hotelSlug) => {
+  const baseDir = path.join(__dirname, "Images", citySlug, hotelSlug, "rooms");
+  let uploadedUrls = [];
+  
+  if (fs.existsSync(baseDir)) {
+    const files = fs.readdirSync(baseDir).filter(f => /\.(jpg|jpeg|png|webp)$/i.test(f));
+    for (const file of files) {
+      const localPath = path.join(baseDir, file);
+      const url = await uploadImage(localPath, `sufar/hotels/${hotelSlug}/rooms`);
+      if (url) uploadedUrls.push(url);
+    }
+  }
+  return uploadedUrls;
+};
+
 // =====================
 // 1. DESTINATIONS + ACTIVITIES
 // =====================
@@ -97,9 +129,7 @@ const seedDestinations = async () => {
   for (const dest of data) {
     const slug = generateSlug(dest.name);
 
-    // صورة الـ destination من لوكال أولاً
     const localImage = await getDestinationImage(slug);
-    // لو مفيش لوكال — مش بنستخدم Pexels للـ destination
     const destImage = localImage || "";
 
     const destination = await Destination.findOneAndUpdate(
@@ -115,10 +145,10 @@ const seedDestinations = async () => {
           image: destImage,
         },
       },
-      { upsert: true, new: true }
+      { upsert: true, returnDocument: 'after' }
     );
 
-    if (localImage) console.log(`  ✅ Destination image uploaded: ${dest.name}`);
+    if (localImage) console.log(`  Destination image uploaded: ${dest.name}`);
     stats.destinations.added++;
 
     // ACTIVITIES — صورهم من Pexels بس
@@ -169,13 +199,15 @@ const seedHotels = async () => {
           image: localDestImage || "",
         },
       },
-      { upsert: true, new: true }
+      { upsert: true, returnDocument: 'after' }
     );
 
     const hotels = city.hotels || [];
 
     for (const h of hotels) {
       const hotelSlug = h.slug || generateSlug(h.name);
+
+      const hotelImages = await getHotelImages(citySlug, hotelSlug);
 
       const hotel = await Hotel.findOneAndUpdate(
         { slug: hotelSlug },
@@ -194,15 +226,17 @@ const seedHotels = async () => {
             location: h.location,
             facilities: h.facilities || [],
             nearbyActivities: h.nearbyActivities || [],
-            images: [],
+            images: hotelImages,
           },
         },
-        { upsert: true, new: true }
+        { upsert: true, returnDocument: 'after' }
       );
 
       stats.hotels.added++;
 
       // ROOMS (no duplicates)
+      const roomImages = await getRoomImages(citySlug, hotelSlug);
+
       for (const r of h.roomTypes || []) {
         await Room.findOneAndUpdate(
           {
@@ -218,7 +252,7 @@ const seedHotels = async () => {
               capacity: r.capacity,
               beds: r.beds,
               bathrooms: r.bathrooms,
-              images: [],
+              images: roomImages,
               amenities: r.amenities || [],
             },
           },
@@ -271,12 +305,17 @@ const main = async () => {
     await mongoose.connect(process.env.MONGO_URI);
     console.log(" Connected to MongoDB");
 
-    console.log(" Cleaning old data...");
-    await Destination.deleteMany({});
-    await Activity.deleteMany({}); 
-    await Hotel.deleteMany({});
-    await Room.deleteMany({});
-    await TravelOffice.deleteMany({});
+    if (process.argv.includes("--clean")) {
+      console.log(" Cleaning old data (--clean flag detected)...");
+      await Destination.deleteMany({});
+      await Activity.deleteMany({}); 
+      await Hotel.deleteMany({});
+      await Room.deleteMany({});
+      await TravelOffice.deleteMany({});
+    } else {
+      console.log(" Skipping data cleaning. Existing data will be preserved.");
+      console.log(" (To delete old data, run: node seedMaster.js --clean)");
+    }
 
     await seedDestinations();
     await seedHotels();
