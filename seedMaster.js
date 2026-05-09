@@ -234,10 +234,13 @@ const seedHotels = async () => {
 
       stats.hotels.added++;
 
-      // ROOMS (no duplicates)
       const roomImages = await getRoomImages(citySlug, hotelSlug);
 
-      for (const r of h.roomTypes || []) {
+      const roomTypes = h.roomTypes || [];
+      for (let i = 0; i < roomTypes.length; i++) {
+        const r = roomTypes[i];
+        const assignedImage = roomImages[i] ? [roomImages[i]] : [];
+
         await Room.findOneAndUpdate(
           {
             hotel: hotel._id,
@@ -252,7 +255,7 @@ const seedHotels = async () => {
               capacity: r.capacity,
               beds: r.beds,
               bathrooms: r.bathrooms,
-              images: roomImages,
+              images: assignedImage,
               amenities: r.amenities || [],
             },
           },
