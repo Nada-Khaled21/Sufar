@@ -17,17 +17,18 @@ app.set('trust proxy', 1);
 // يحمي الـ HTTP headers
 app.use(helmet());
 
-// Ensure DB is connected before handling any API requests
-app.use(async (req, res, next) => {
-  try {
-    await connectDB();
-    next();
-  } catch (error) {
-    console.error('Database connection failed:', error.message);
-    res.status(500).json({ message: 'Database connection failed' });
-  }
+// Connect to DB once at startup
+connectDB().then(() => {
+  console.log('Database ready');
+}).catch(err => {
+  console.error('Failed to connect to DB:', err.message);
+  process.exit(1);
 });
 
+
+// General Middleware — CORS لازم يجي أول
+app.use(cors());
+app.use(express.json({ limit: '10kb' }));
 
 const limiter = rateLimit({
   windowMs: 15 * 60 * 1000,
@@ -45,10 +46,6 @@ const authLimiter = rateLimit({
   message: { message: 'Too many login attempts, please try again later.' }
 });
 app.use('/api/auth', authLimiter);
-
-// General Middleware
-app.use(cors());
-app.use(express.json({ limit: '10kb' }));
 
 // Routes
 app.use('/api/auth', require('./src/routes/authRoutes'));
@@ -153,4 +150,3 @@ module.exports = app;
   // https://sufar-rho.vercel.app/
 
 //  GET /api/weather?city=Cairo&slug=cairo
-// GET /api/weather?city=Dubai&slug=dubai

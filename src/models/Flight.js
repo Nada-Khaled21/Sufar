@@ -59,12 +59,7 @@ const flightSchema = new mongoose.Schema({
     }
   },
 
-  bookedSeats: [
-    {
-      seatNumber: String,
-      class: { type: String, enum: ['economy', 'business'] }
-    }
-  ],
+  bookedSeats: [String],
 
   agency: {
     type: mongoose.Schema.Types.ObjectId,
@@ -93,17 +88,7 @@ flightSchema.pre('save', function (next) {
    UPDATE SEATS
 ========================= */
 flightSchema.methods.updateAvailableSeats = function () {
-
-  const economyBooked = this.bookedSeats.filter(s => s.class === 'economy').length;
-  const businessBooked = this.bookedSeats.filter(s => s.class === 'business').length;
-
-  this.seats.economy.available =
-    this.seats.economy.total - economyBooked;
-
-  if (this.seats.business?.total) {
-    this.seats.business.available =
-      this.seats.business.total - businessBooked;
-  }
+  this.seats.economy.available = this.seats.economy.total - this.bookedSeats.length;
 };
 
 flightSchema.index({ agency: 1 });

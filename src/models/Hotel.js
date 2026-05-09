@@ -83,10 +83,11 @@ const hotelSchema = new mongoose.Schema(
   { timestamps: true },
 );
 
-hotelSchema.pre('save', function() {
+hotelSchema.pre('save', function(next) {
   if (!this.slug && this.name) {
     this.slug = this.name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)+/g, '');
   }
+  next();
 });
 
 module.exports = mongoose.model("Hotel", hotelSchema);

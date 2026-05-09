@@ -242,9 +242,7 @@ const simulatePayment = (cardNumber) => {
   return { success: true };
 };
 
-// =====================
 // Get My Bookings
-// =====================
 exports.getMyBookings = async (req, res) => {
   try {
     const bookings = await Booking.find({ user: req.user._id })
@@ -260,9 +258,7 @@ exports.getMyBookings = async (req, res) => {
   }
 };
 
-// =====================
 // Get Single Booking
-// =====================
 exports.getBooking = async (req, res) => {
   try {
     const booking = await Booking.findById(req.params.id)
@@ -286,9 +282,7 @@ exports.getBooking = async (req, res) => {
   }
 };
 
-// =====================
 // Cancel Booking
-// =====================
 exports.cancelBooking = async (req, res) => {
   try {
     const booking = await Booking.findById(req.params.id);
@@ -308,7 +302,7 @@ exports.cancelBooking = async (req, res) => {
     booking.bookingStatus = 'cancelled';
     await booking.save();
 
-    // ✅ مش محتاجين نعمل حاجة للـ Room
+    //  مش محتاجين نعمل حاجة للـ Room
     // الـ Conflict Check هيشوف status: { $ne: 'cancelled' }
     // فالغرفة هتبقى متاحة تلقائي للحجوزات الجديدة
 
@@ -332,9 +326,7 @@ exports.cancelBooking = async (req, res) => {
   }
 };
 
-// =====================
 // Check Room Availability
-// =====================
 exports.checkAvailability = async (req, res) => {
   try {
     const { roomId, checkIn, checkOut } = req.query;
@@ -343,8 +335,18 @@ exports.checkAvailability = async (req, res) => {
       return res.status(400).json({ message: 'roomId, checkIn and checkOut are required' });
     }
 
+    // Validate roomId format
+    const mongoose = require('mongoose');
+    if (!mongoose.isValidObjectId(roomId)) {
+      return res.status(400).json({ message: 'Invalid roomId format' });
+    }
+
     const checkInDate = new Date(checkIn);
     const checkOutDate = new Date(checkOut);
+
+    if (isNaN(checkInDate) || isNaN(checkOutDate)) {
+      return res.status(400).json({ message: 'Invalid date format' });
+    }
 
     if (checkInDate >= checkOutDate) {
       return res.status(400).json({ message: 'Invalid dates' });

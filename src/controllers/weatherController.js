@@ -36,20 +36,19 @@ const getClimateDesc = (temp) => {
 };
 
 exports.getWeather = async (req, res) => {
-  try {
-    const { city, slug } = req.query;
+  const { city, slug } = req.query;
 
+  const bestTime = bestTimeMap[slug?.toLowerCase()] ||
+                   bestTimeMap[city?.toLowerCase()] ||
+                   'Year-round';
+  try {
     if (!city) {
       return res.status(400).json({ message: 'city is required' });
     }
 
-    const bestTime = bestTimeMap[slug?.toLowerCase()] ||
-                     bestTimeMap[city?.toLowerCase()] ||
-                     'Year-round';
-
     const apiKey = process.env.OPENWEATHER_API_KEY;
 
-    if (!apiKey) {
+    if (!apiKey || apiKey === 'your_key_here') {
       return res.json({
         city,
         temperature: null,
@@ -81,6 +80,17 @@ exports.getWeather = async (req, res) => {
   } catch (error) {
     if (error.response?.status === 404) {
       return res.status(404).json({ message: 'City not found' });
+    }
+
+    if (error.response?.status === 401 || error.response?.status === 403) {
+      return res.json({
+        city,
+        temperature: null,
+        description: 'Weather data unavailable',
+        climate: '',
+        bestTime,
+        icon: null
+      });
     }
     res.status(500).json({ message: error.message });
   }

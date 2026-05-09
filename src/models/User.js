@@ -30,6 +30,10 @@ const userSchema = new mongoose.Schema({
     type: String,
     default: ""
   },
+  location: {
+    type: String,
+    default: ""
+  },
   wishlist: [{
     type: mongoose.Schema.Types.ObjectId,
     ref: 'Hotel'
