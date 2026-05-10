@@ -5582,10 +5582,10 @@
   "description": "Explore Luxor, one of the world's greatest open-air museums, home to ancient temples, the Nile views, and rich Pharaonic history.",
   "hotels": [
     {
-      "name": "Luxor Nile View Hotel (Name Not Provided)",
-      "slug": "luxor-nile-view-hotel",
+      "name": "Sofitel Winter Palace Luxor ",
+      "slug": "sofitel-winter-palace",
       "stars": 5,
-      "rating": null,
+      "rating": 4.8,
       "reviewsCount": null,
       "description": "Hotel offering premium Nile view rooms with a mix of luxury and comfort.",
       "location": {
