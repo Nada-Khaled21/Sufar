@@ -40,13 +40,20 @@ def load_json(filename):
     path = BASE_DIR / filename
     if not path.exists():
         print(f"⚠️  {filename} not found")
-        return []
-    with open(path, "r", encoding="utf-8") as f:
-        return json.load(f)
+        return {}
+    try:
+        with open(path, "r", encoding="utf-8") as f:
+            content = f.read()
+            if not content.strip():
+                return {}
+            return json.loads(content)
+    except Exception as e:
+        print(f"⚠️ Error loading {filename}: {e}")
+        return {}
 
 intents_data     = load_json("intents.json")
-cities_dataset   = load_json("../citiesDataset.json")
-destination_data = load_json("../destination.json")
+cities_dataset   = load_json("citiesDataset.json")
+destination_data = load_json("destination.json")
 
 # ============================================================
 # CORE DATA
@@ -94,7 +101,8 @@ cities = [
 
 class IntentMatcher:
     def __init__(self, data):
-        self.intents = data.get("intents", []) if data else []
+        # Ensure data is a dict and has "intents" key
+        self.intents = data.get("intents", []) if isinstance(data, dict) else []
         self.pattern_texts = []
         self.pattern_tags = []
 
@@ -111,7 +119,7 @@ class IntentMatcher:
             self.pattern_vectors = None
 
     def predict(self, text: str, threshold: float = 0.20):
-        if not self.vectorizer:
+        if not self.vectorizer or self.pattern_vectors is None or self.pattern_vectors.shape[0] == 0:
             return None, 0.0
 
         query_vec = self.vectorizer.transform([text.lower()])
