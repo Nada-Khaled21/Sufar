@@ -84,7 +84,8 @@ exports.toggleWishlist = async (req, res) => {
       return res.status(404).json({ message: 'User not found' });
     }
 
-    const index = user.wishlist.indexOf(hotelId);
+    // Use .toString() to compare ObjectIds correctly
+    const index = user.wishlist.findIndex(id => id.toString() === hotelId.toString());
 
     if (index === -1) {
       user.wishlist.push(hotelId);

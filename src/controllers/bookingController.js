@@ -23,6 +23,11 @@ exports.createHotelBooking = async (req, res) => {
       return res.status(400).json({ message: 'Check-out must be after check-in' });
     }
 
+    // التحقق إن الـ check-in مش في الماضي
+    if (checkInDate < new Date()) {
+      return res.status(400).json({ message: 'Check-in date cannot be in the past' });
+    }
+
     //  Conflict Check — هل الغرفة محجوزة في التواريخ دي؟
     // بنشوف في الـ Bookings مش في الـ Room نفسها
     const conflict = await Booking.findOne({
@@ -82,6 +87,12 @@ exports.createFlightBooking = async (req, res) => {
     const flight = await Flight.findById(flightId);
     if (!flight) {
       return res.status(404).json({ message: 'Flight not found' });
+    }
+
+    // التحقق من صحة الـ seatClass
+    const allowedClasses = ['economy', 'business'];
+    if (!allowedClasses.includes(seatClass)) {
+      return res.status(400).json({ message: 'seatClass must be "economy" or "business"' });
     }
 
     // التحقق إن الـ seats مش محجوزة
@@ -182,6 +193,11 @@ exports.payBooking = async (req, res) => {
 
     if (booking.paymentStatus === 'paid') {
       return res.status(400).json({ message: 'Booking already fully paid' });
+    }
+
+    // منع الدفع الجزئي مرة ثانية لو مدفوع جزء بالفعل
+    if (booking.paymentStatus === 'partially_paid' && paymentOption === 'partial') {
+      return res.status(400).json({ message: 'A partial payment was already made. Please pay the remaining amount in full.' });
     }
 
     // ─── Calculate amount ──────────────────────────────

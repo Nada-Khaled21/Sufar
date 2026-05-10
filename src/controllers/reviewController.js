@@ -14,6 +14,15 @@ exports.createReview = async (req, res) => {
       return res.status(400).json({ message: 'Rating and comment are required' });
     }
 
+    // Prevent duplicate reviews from the same user
+    const existingReview = await Review.findOne({
+      user: req.user._id,
+      ...(hotelId ? { hotel: hotelId } : { destination: destinationId })
+    });
+    if (existingReview) {
+      return res.status(400).json({ message: 'You have already reviewed this.' });
+    }
+
     const review = await Review.create({
       user: req.user._id,
       hotel: hotelId,
