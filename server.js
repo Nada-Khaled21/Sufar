@@ -58,6 +58,7 @@ app.use('/api/reviews', require('./src/routes/reviewRoutes'));
 app.use('/api/gallery', require('./src/routes/galleryRoutes'));
 app.use('/api/travel-offices', require('./src/routes/travelOfficeRoutes'));
 app.use('/api/weather', require('./src/routes/weatherRoutes'));
+app.use('/api/ai', require('./src/routes/aiRoutes'));
 
 
 // Test Route

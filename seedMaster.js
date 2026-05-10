@@ -92,11 +92,12 @@ const getHotelImages = async (citySlug, hotelSlug) => {
   
   if (fs.existsSync(baseDir)) {
     const files = fs.readdirSync(baseDir).filter(f => /\.(jpg|jpeg|png|webp)$/i.test(f));
-    for (const file of files) {
+    const uploadPromises = files.map(async (file) => {
       const localPath = path.join(baseDir, file);
-      const url = await uploadImage(localPath, `sufar/hotels/${hotelSlug}/general`);
-      if (url) uploadedUrls.push(url);
-    }
+      return await uploadImage(localPath, `sufar/hotels/${hotelSlug}/general`);
+    });
+    const results = await Promise.all(uploadPromises);
+    uploadedUrls = results.filter(url => url !== null);
   }
   return uploadedUrls;
 };
@@ -108,11 +109,12 @@ const getRoomImages = async (citySlug, hotelSlug) => {
   
   if (fs.existsSync(baseDir)) {
     const files = fs.readdirSync(baseDir).filter(f => /\.(jpg|jpeg|png|webp)$/i.test(f));
-    for (const file of files) {
+    const uploadPromises = files.map(async (file) => {
       const localPath = path.join(baseDir, file);
-      const url = await uploadImage(localPath, `sufar/hotels/${hotelSlug}/rooms`);
-      if (url) uploadedUrls.push(url);
-    }
+      return await uploadImage(localPath, `sufar/hotels/${hotelSlug}/rooms`);
+    });
+    const results = await Promise.all(uploadPromises);
+    uploadedUrls = results.filter(url => url !== null);
   }
   return uploadedUrls;
 };
@@ -232,6 +234,7 @@ const seedHotels = async () => {
         { upsert: true, returnDocument: 'after' }
       );
 
+      console.log(`  Hotel images uploaded and saved: ${h.name} (${hotelImages.length} images)`);
       stats.hotels.added++;
 
       const roomImages = await getRoomImages(citySlug, hotelSlug);
@@ -264,6 +267,7 @@ const seedHotels = async () => {
 
         stats.rooms.added++;
       }
+      console.log(`  Rooms processed for: ${h.name}`);
     }
   }
 };

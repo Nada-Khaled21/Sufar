@@ -1,8 +1,6 @@
 const TravelOffice = require('../models/travelOffice');
 
-// =====================
 // GET ALL — مع Search و Filter و Pagination
-// =====================
 exports.getOffices = async (req, res) => {
   try {
     const { search, city, minRating, page = 1 } = req.query;
